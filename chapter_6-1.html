@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 6.1: </title>
+    <title>Chapter 6.1: Architectural design decisions</title>
 </head>
+
 <body>
-    
+
+    <header>
+        <h1><a href="homepage.html">CHAPTER 6</a></h1>
+        <h2>Architectural Design</h2>
+        <button><a href="chapter_6-1.html">Chapter 6.1</a></button>
+        <button><a href="">Chapter 6.2</a></button>
+        <button><a href="">Chapter 6.3</a></button>
+        <button><a href="">Chapter 6.4</a></button>
+    </header>
+
+    <main>
+        <h1>Chapter 6.1: Architectural design decisions</h1>
+        <p>Architectural design is a creative process where you design a system organization
+            that will satisfy the functional and non-functional requirements of a system. Because
+            it is a creative process, the activities within the process depend on the type of system
+            being developed, the background and experience of the system architect, and the
+            specific requirements for the system. It is therefore useful to think of architectural
+            design as a series of decisions to be made rather than a sequence of activities.</p>
+        <p>During the architectural design process, system architects have to make a number
+            of structural decisions that profoundly affect the system and its development
+            process. Based on their knowledge and experience, they have to consider the follow
+            ing fundamental questions about the system:</p>
+
+        <ol>
+            <li>Is there a generic application architecture that can act as a template for the sys
+                tem that is being designed?</li>
+            <li>How will the system be distributed across a number of cores or processors?</li>
+            <li>What architectural patterns or styles might be used?</li>
+            <li>What will be the fundamental approach used to structure the system?</li>
+            <li>How will the structural components in the system be decomposed into sub
+                components?</li>
+            <li>What strategy will be used to control the operation of the components in the system?</li>
+            <li>What architectural organization is best for delivering the non-functional require
+                ments of the system?</li>
+            <li>How will the architectural design be evaluated?</li>
+            <li>How should the architecture of the system be documented?</li>
+        </ol>
+
+        <p>Although each software system is unique, systems in the same application
+            domain often have similar architectures that reflect the fundamental concepts of the
+            domain. For example, application product lines are applications that are built around
+            a core architecture with variants that satisfy specific customer requirements. When
+            designing a system architecture, you have to decide what your system and broader
+            application classes have in common, and decide how much knowledge from these
+            application architectures you can reuse. I discuss generic application architectures in
+            Section 6.4 and application product lines in Chapter 16.</p>
+
+        <p> For embedded systems and systems designed for personal computers, there is
+            usually only a single processor and you will not have to design a distributed architec
+            ture for the system. However, most large systems are now distributed systems in
+            which the system software is distributed across many different computers. The
+            choice of distribution architecture is a key decision that affects the performance and
+            reliability of the system. This is a major topic in its own right and I cover it sepa
+            rately in Chapter 18.</p>
+
+        <p> The architecture of a software system may be based on a particular architectural
+            pattern or style. An architectural pattern is a description of a system organization
+            (Garlan and Shaw, 1993), such as a client–server organization or a layered architecture.
+            Architectural patterns capture the essence of an architecture that has been used in dif
+            ferent software systems. You should be aware of common patterns, where they can be
+            used, and their strengths and weaknesses when making decisions about the architec
+            ture of a system. I discuss a number of frequently used patterns in Section 6.3.</p>
+
+        <p> Garlan and Shaw’s notion of an architectural style (style and pattern have come to
+            mean the same thing) covers questions 4 to 6 in the previous list. You have to choose
+            the most appropriate structure, such as client–server or layered structuring, that will
+            enable you to meet the system requirements. To decompose structural system units,
+            you decide on the strategy for decomposing components into sub-components. The
+            approaches that you can use allow different types of architecture to be implemented.
+            Finally, in the control modeling process, you make decisions about how the execu
+            tion of components is controlled. You develop a general model of the control rela
+            tionships between the various parts of the system.</p>
+
+        <p> Because of the close relationship between non-functional requirements and soft
+            ware architecture, the particular architectural style and structure that you choose for
+            a system should depend on the non-functional system requirements</p>
+
+        <ol>
+            <li>Performance If performance is a critical requirement, the architecture should
+                be designed to localize critical operations within a small number of com
+                ponents, with these components all deployed on the same computer rather than
+                distributed across the network. This may mean using a few relatively large com
+                ponents rather than small, fine-grain components, which reduces the number of
+                component communications. You may also consider run-time system organiza
+                tions that allow the system to be replicated and executed on different processors.</li>
+            <li>Security If security is a critical requirement, a layered structure for the architec
+                ture should be used, with the most critical assets protected in the innermost lay
+                ers, with a high level of security validation applied to these layers.</li>
+            <li>Safety If safety is a critical requirement, the architecture should be designed so
+                that safety-related operations are all located in either a single component or in a
+                small number of components. This reduces the costs and problems of safety val
+                idation and makes it possible to provide related protection systems that can
+                safely shut down the system in the event of failure.</li>
+            <li>Availability If availability is a critical requirement, the architecture should be
+                designed to include redundant components so that it is possible to replace and
+                update components without stopping the system. I describe two fault-tolerant
+                system architectures for high-availability systems in Chapter 13.</li>
+            <li>Maintainability If maintainability is a critical requirement, the system architec
+                ture should be designed using fine-grain, self-contained components that may readily be changed.
+                Producers of data should be separated from consumers and
+                shared data structures should be avoided</li>
+        </ol>
+
+        <p> Obviously there is potential conflict between some of these architectures. For
+            example, using large components improves performance and using small, fine-grain
+            components improves maintainability. If both performance and maintainability are
+            important system requirements, then some compromise must be found. This can
+            sometimes be achieved by using different architectural patterns or styles for different
+            parts of the system.</p>
+
+        <p> Evaluating an architectural design is difficult because the true test of an architec
+            ture is how well the system meets its functional and non-functional requirements
+            when it is in use. However, you can do some evaluation by comparing your design
+            against reference architectures or generic architectural patterns. Bosch’s (2000)
+            description of the non-functional characteristics of architectural patterns can also be
+            used to help with architectural evaluation.</p>
+
+    </main>
+    <footer>
+
+    </footer>
+
 </body>
+
 </html>
