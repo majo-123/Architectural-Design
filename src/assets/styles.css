@@ -1,42 +1,169 @@
-footer{
-    background-color: rgb(137, 21, 21);
-    margin: 0
+:root {
+  --primary: #891515;
+  --light: #f2f2f2;
+  --dark: #222831;
+}
+
+@font-face {
+  font-family: 'Blona';
+  src: url('fonts/BLONA.ttf');
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  background-color: var(--primary);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: var(--light);
+  padding-top: 2.2rem;
+  padding-bottom: 1.5rem;
+}
+header > center > h1 > a {
+  text-decoration: none;
+  color: var(--light);
+  font-size: 8rem;
+  font-family: 'Blona';
+  letter-spacing: 1rem;
+}
+
+header > center > h2 {
+  font-size: 2rem;
+  font-family: 'Blona';
+  letter-spacing: 0.5rem;
+}
+
+header > center > h1,
+header > center > h2 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  gap: 4rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.main_content {
+  font-size: 1.4rem;
+  width: 80%;
+  padding-left: 5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--dark);
+  line-height: 2.5rem;
+}
+
+.main_content > p {
+  text-indent: 2rem;
+  text-align: justify;
+}
+
+.main_content > h1 {
+  color: var(--primary);
+  margin-bottom: 0;
+}
+.main_content > h2 {
+  color: var(--primary);
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+.main_content > ol {
+  padding-left: 6rem;
+}
+
+.sidenav {
+  background-color: var(--primary);
+  position: sticky;
+  top: 6rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  gap: 1.5rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.sidenav > h3 {
+  font-family: 'Blona';
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--light);
+  padding-bottom: 0.5rem;
+  padding-top: 1.5rem;
+}
+
+.sidenav > button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  width: 11rem;
+  border: none;
+}
+
+.sidenav :hover {
+  scale: 1.1;
+  transition: 1s;
+}
+
+.sidenav > button > a {
+  text-decoration: none;
+  font-family: 'Blona';
+  color: var(--primary);
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.sidenav > h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+footer {
+  background-color: var(--primary);
+  margin: 0;
 }
 
 footer > section {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-footer > section > div > h3{
-    font-size: 2rem;
-    padding: 0px 80px;
-    color: #FBF9D1;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+footer > section > div > h3 {
+  font-size: 3rem;
+  padding: 0px 80px;
+  color: var(--light);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: 'Blona';
+  letter-spacing: 0.3rem;
 }
 
-footer > section > ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 30px;
-    padding: 0;
-
+footer > section > ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  padding: 0;
 }
 
-footer > section > ul >li{
-    background-color: #FBF9D1;
-    color: rgb(137, 21, 21);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+footer > section > ul > li {
+  background-color: var(--light);
+  color: var(--primary);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: 'Blona';
+  letter-spacing: 0.2rem;
 }
