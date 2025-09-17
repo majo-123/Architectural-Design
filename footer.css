@@ -3,6 +3,7 @@
 --primary-color: #8c7ae6
 }
 
+
 footer{
 
     background-color: var(--primary-color);
@@ -15,6 +16,9 @@ footer{
     border-style: solid;
     
 
+}
+header h2{
+   color: aliceblue; 
 }
 
 .sample{
