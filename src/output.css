@@ -316,25 +316,18 @@ footer {
   padding-bottom: calc(var(--spacing) * 7);
 }
 footer > section {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: calc(var(--spacing) * 10);
-  background-color: var(--secondary-color);
   padding-inline: calc(var(--spacing) * 10);
-  padding-block: calc(var(--spacing) * 3);
   text-align: center;
 }
 .footer-names {
   grid-column: span 3 / span 3;
-  padding-block: calc(var(--spacing) * 1);
-  font-family: var(--font-verdana);
-  font-size: 1rem;
-  --tw-font-weight: var(--font-weight-bold);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-rogria);
+  font-size: 1.1rem;
   --tw-tracking: var(--tracking-widest);
   letter-spacing: var(--tracking-widest);
-  color: var(--primary-color);
-  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-transform: lowercase;
 }
 .header-button {
   grid-column: span 3 / span 3;
