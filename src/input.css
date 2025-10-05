@@ -1,1 +1,101 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Blona';
+  src: url('./assets/fonts/BLONA.ttf');
+}
+
+@font-face {
+  font-family: 'Rogria';
+  src: url('./assets/fonts/Rogria.ttf');
+}
+
+@theme {
+  --font-blona: 'Blona';
+  --font-rogria: 'Rogria';
+  --font-verdana: Verdana;
+
+  --primary-color: #891515;
+  --secondary-color: #f4e9d7;
+  --light-color: #f2f2f2;
+  --dark-color: #222831;
+}
+
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.bg-light-color {
+  background-color: var(--light-color);
+}
+
+.bg-dark-color {
+  background-color: var(--dark-color);
+}
+
+.font-primary-color {
+  color: var(--primary-color);
+}
+
+.font-secondary-color {
+  color: var(--secondary-color);
+}
+
+.font-light-color {
+  color: var(--light-color);
+}
+
+.font-dark-color {
+  color: var(--dark-color);
+}
+
+.font-blona {
+  font-family: var(--font-blona);
+}
+.font-verdana {
+  font-family: var(--font-verdana);
+}
+
+body {
+  box-sizing: border-box;
+}
+
+header {
+  @apply bg-[var(--primary-color)] text-[var(--secondary-color)] pt-6 text-center;
+}
+
+nav {
+  @apply sticky top-0 mt-0 gap-10 px-15 py-7 text-2xl bg-[var(--primary-color)];
+}
+
+.nav1 {
+  @apply grid-cols-1 grid max-[768px]:hidden md:px-30 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-12 xl:px-50;
+}
+
+.nav2 {
+  @apply grid-cols-12 hidden max-[768px]:grid;
+}
+
+main {
+  @apply bg-[var(--light-color)];
+}
+
+footer {
+  @apply bg-[var(--primary-color)] pt-8 pb-7 border-t-2 border-[var(--primary-color)];
+}
+
+footer > section {
+  @apply grid grid-cols-12 text-center gap-10 px-10 bg-[var(--secondary-color)] py-3;
+}
+
+.footer-names {
+  @apply text-[var(--primary-color)] font-verdana tracking-widest  py-1 font-bold uppercase col-span-3 text-[1rem];
+}
+
+.header-button {
+  @apply bg-[var(--secondary-color)] text-[var(--primary-color)] font-blona text-[1.5rem] tracking-widest px-5 py-1 rounded-xl  uppercase col-span-3 drop-shadow-xl shadow-[10px_10px_0_var(--dark-color)] hover:scale-104 duration-500;
+}
