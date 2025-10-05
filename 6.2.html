@@ -1,88 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Architectural views</title>
-    <link href="./src/output.css" rel="stylesheet">
-</head>
-<body>
-
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
     <header>
-        <center>
-            <h1><a href="homepage.html">CHAPTER 6</a></h1>
-            <h2>Architectural Design</h2>
-            <button><a href="chapter_6-1.html">Chapter 6.1</a></button>
-            <button><a href="6.2.html">Chapter 6.2</a></button>
-            <button><a href="Chapter6_3.html">Chapter 6.3</a></button>
-            <button><a href="Chapter6.4.html">Chapter 6.4</a></button>
-        </center>
+      <center>
+        <h1><a href="homepage.html">CHAPTER 6</a></h1>
+        <h2>Architectural Design</h2>
+        <button><a href="chapter_6-1.html">Chapter 6.1</a></button>
+        <button><a href="6.2.html">Chapter 6.2</a></button>
+        <button><a href="Chapter6_3.html">Chapter 6.3</a></button>
+        <button><a href="Chapter6.4.html">Chapter 6.4</a></button>
+      </center>
     </header>
-    
+
     <h1>6.2 Architectural views</h1>
-     In this section, I discuss two issues that are relevant to both of these:
-        
-    <p>1. What views or perspectives are useful when designing and documenting a systems architecture?</p>
+    In this section, I discuss two issues that are relevant to both of these:
+
+    <p>
+      1. What views or perspectives are useful when designing and documenting a
+      systems architecture?
+    </p>
     <p>2. What notations should be used for describing architectural models?</p>
-    
-    
-    <href>It is impossible to represent all relevant information about a systems architecture in
-a single architectural model, as each model only shows one view or perspective of the
-system. It might show how a system is decomposed into modules, how the run-time
-processes interact, or the different ways in which system components are distributed
-across a network</href>
-    
-    <href>There are different opinions as to what views are required. Krutchen (1995), in
-his well-known 4+1 view model of software architecture, suggests that there should
-be four fundamental architectural views, which are related using use cases or scenarios</href>
-    
+
+    <href
+      >It is impossible to represent all relevant information about a systems
+      architecture in a single architectural model, as each model only shows one
+      view or perspective of the system. It might show how a system is
+      decomposed into modules, how the run-time processes interact, or the
+      different ways in which system components are distributed across a
+      network</href
+    >
+
+    <href
+      >There are different opinions as to what views are required. Krutchen
+      (1995), in his well-known 4+1 view model of software architecture,
+      suggests that there should be four fundamental architectural views, which
+      are related using use cases or scenarios</href
+    >
+
     <h2>The views that he suggests are:</h2>
-    <p>1. A logical view, which shows the key abstractions in the system as objects or
-object classes</p>
-    <p>2. A process view, which shows how, at run-time, the system is composed of interacting processes</p>
-    <p>3. A development view, which shows how the software is decomposed for development, that is, it shows the breakdown of the software into components that are
-implemented by a single developer or development team</p>
-    <p>4. A physical view, which shows the system hardware and how software components are distributed across the processors in the system.</p>
+    <p>
+      1. A logical view, which shows the key abstractions in the system as
+      objects or object classes
+    </p>
+    <p>
+      2. A process view, which shows how, at run-time, the system is composed of
+      interacting processes
+    </p>
+    <p>
+      3. A development view, which shows how the software is decomposed for
+      development, that is, it shows the breakdown of the software into
+      components that are implemented by a single developer or development team
+    </p>
+    <p>
+      4. A physical view, which shows the system hardware and how software
+      components are distributed across the processors in the system.
+    </p>
     <main>
-    
-    <h2>Hofmeister et al. (2000) suggest the use of similar views but add to this the notion
-of a conceptual view. This view is an abstract view of the system that can be the basis
-for decomposing high-level requirements into more detailed specifications, help
-engineers make decisions about components that can be reused, and represent
-a product line (discussed in Chapter 16) rather than a single system</h2>
-    <h2>In practice, conceptual views are almost always developed during the design
-process and are used to support architectural decision making. They are a way of
-communicating the essence of a system to different stakeholders. During the design
-process, some of the other views may also be developed when different aspects of
-the system are discussed, but there is no need for a complete description from all perspectives</h2>
-    <h2>A survey in 2006
-(Lange et al., 2006) showed that, when the UML was used, it was mostly applied in
-a loose and informal way. The authors of that paper argued that this was a bad thing.
-I disagree with this view</h2>
-    <h2>The UML is of most value when you are documenting an architecture in
-detail or using model-driven development, as discussed in Chapter 5</h2>
-    <h2>A number of researchers have proposed the use of more specialized architectural
-description languages (ADLs) (Bass et al., 2003) to describe system architectures.</h2>
+      <h2>
+        Hofmeister et al. (2000) suggest the use of similar views but add to
+        this the notion of a conceptual view. This view is an abstract view of
+        the system that can be the basis for decomposing high-level requirements
+        into more detailed specifications, help engineers make decisions about
+        components that can be reused, and represent a product line (discussed
+        in Chapter 16) rather than a single system
+      </h2>
+      <h2>
+        In practice, conceptual views are almost always developed during the
+        design process and are used to support architectural decision making.
+        They are a way of communicating the essence of a system to different
+        stakeholders. During the design process, some of the other views may
+        also be developed when different aspects of the system are discussed,
+        but there is no need for a complete description from all perspectives
+      </h2>
+      <h2>
+        A survey in 2006 (Lange et al., 2006) showed that, when the UML was
+        used, it was mostly applied in a loose and informal way. The authors of
+        that paper argued that this was a bad thing. I disagree with this view
+      </h2>
+      <h2>
+        The UML is of most value when you are documenting an architecture in
+        detail or using model-driven development, as discussed in Chapter 5
+      </h2>
+      <h2>
+        A number of researchers have proposed the use of more specialized
+        architectural description languages (ADLs) (Bass et al., 2003) to
+        describe system architectures.
+      </h2>
 
-    <p>This makes it difficult to assess their usefulness for practical software engineering.
-ADLs designed for a particular domain (e.g., automobile systems) may be used as a</p>
-    
-    <h1>Figure 6.2 The modelview-controller (MVC)pattern</h1>
-    <img src="Annotation 2025-09-03 114743.png" alt="">
+      <p>
+        This makes it difficult to assess their usefulness for practical
+        software engineering. ADLs designed for a particular domain (e.g.,
+        automobile systems) may be used as a
+      </p>
 
-    <p>basis for model-driven development. However, I believe that informal models and
-notations, such as the UML, will remain the most commonly used ways of documenting system architectures</p>
-<p>Users of agile methods claim that detailed design documentation is mostly
-unused. It is, therefore, a waste of time and money to develop it. I largely agree with
-this view and I think that, for most systems, it is not worth developing a detailed
-architectural description from these four perspectives. You should develop the views
-that are useful for communication and not worry about whether or not your architectural documentation is complete. However, an exception to this is when you are
-developing critical systems, when you need to make a detailed dependability analysis of the system. You may need to convince external regulators that your system
-conforms to their regulations and so complete architectural documentation may be
-required.
-</p>
-        <section id="content"></section>
+      <h1>Figure 6.2 The modelview-controller (MVC)pattern</h1>
+      <img src="Annotation 2025-09-03 114743.png" alt="" />
+
+      <p>
+        basis for model-driven development. However, I believe that informal
+        models and notations, such as the UML, will remain the most commonly
+        used ways of documenting system architectures
+      </p>
+      <p>
+        Users of agile methods claim that detailed design documentation is
+        mostly unused. It is, therefore, a waste of time and money to develop
+        it. I largely agree with this view and I think that, for most systems,
+        it is not worth developing a detailed architectural description from
+        these four perspectives. You should develop the views that are useful
+        for communication and not worry about whether or not your architectural
+        documentation is complete. However, an exception to this is when you are
+        developing critical systems, when you need to make a detailed
+        dependability analysis of the system. You may need to convince external
+        regulators that your system conforms to their regulations and so
+        complete architectural documentation may be required.
+      </p>
+      <section id="content"></section>
     </main>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
