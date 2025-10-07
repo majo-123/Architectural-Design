@@ -181,9 +181,6 @@
   .static {
     position: static;
   }
-  .-mt-8 {
-    margin-top: calc(var(--spacing) * -8);
-  }
   .block {
     display: block;
   }
@@ -192,26 +189,6 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .font-rogria {
-    font-family: var(--font-rogria);
-  }
-  .font-verdana {
-    font-family: var(--font-verdana);
-  }
-  .text-\[1\.5rem\] {
-    font-size: 1.5rem;
-  }
-  .text-\[6rem\] {
-    font-size: 6rem;
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .tracking-wider {
-    --tw-tracking: var(--tracking-wider);
-    letter-spacing: var(--tracking-wider);
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -264,16 +241,54 @@ header {
   text-align: center;
   color: var(--secondary-color);
 }
+.header-h1 {
+  padding-bottom: calc(var(--spacing) * 4);
+  font-family: var(--font-rogria);
+  font-size: 3rem;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  --tw-tracking: var(--tracking-wider);
+  letter-spacing: var(--tracking-wider);
+  color: var(--secondary-color);
+  @media (width >= 40rem) {
+    font-size: 4rem;
+  }
+  @media (width >= 64rem) {
+    padding-bottom: calc(var(--spacing) * 0);
+  }
+  @media (width >= 64rem) {
+    font-size: 6rem;
+  }
+}
+.header-h2 {
+  margin-top: calc(var(--spacing) * -8);
+  font-family: var(--font-verdana);
+  font-size: 1.1rem;
+  --tw-tracking: var(--tracking-wider);
+  letter-spacing: var(--tracking-wider);
+  @media (width >= 40rem) {
+    font-size: 1.3rem;
+  }
+  @media (width >= 64rem) {
+    font-size: 1.5rem;
+  }
+}
 nav {
   position: sticky;
   top: calc(var(--spacing) * 0);
   margin-top: calc(var(--spacing) * 0);
-  gap: calc(var(--spacing) * 10);
+  gap: calc(var(--spacing) * 5);
   background-color: var(--primary-color);
-  padding-inline: calc(var(--spacing) * 15);
+  padding-inline: calc(var(--spacing) * 10);
   padding-block: calc(var(--spacing) * 7);
   font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
+  @media (width >= 40rem) {
+    gap: calc(var(--spacing) * 10);
+  }
+  @media (width >= 40rem) {
+    padding-inline: calc(var(--spacing) * 15);
+  }
 }
 .nav1 {
   display: grid;
@@ -299,7 +314,7 @@ nav {
 }
 .nav2 {
   display: none;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   @media (width < 768px) {
     display: grid;
   }
@@ -333,10 +348,9 @@ footer > section {
   grid-column: span 3 / span 3;
   border-radius: var(--radius-xl);
   background-color: var(--secondary-color);
-  padding-inline: calc(var(--spacing) * 5);
   padding-block: calc(var(--spacing) * 1);
   font-family: var(--font-blona);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   --tw-tracking: var(--tracking-widest);
   letter-spacing: var(--tracking-widest);
   color: var(--primary-color);
@@ -356,6 +370,12 @@ footer > section {
       scale: var(--tw-scale-x) var(--tw-scale-y);
     }
   }
+  @media (width < 768px) {
+    grid-column: span 1 / span 1;
+  }
+  @media (width >= 40rem) {
+    font-size: 1.5rem;
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -374,14 +394,6 @@ footer > section {
   inherits: false;
 }
 @property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -435,6 +447,14 @@ footer > section {
   initial-value: 100%;
 }
 @property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -535,8 +555,6 @@ footer > section {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-font-weight: initial;
-      --tw-tracking: initial;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
@@ -550,6 +568,8 @@ footer > section {
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
       --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
