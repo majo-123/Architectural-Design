@@ -68,8 +68,16 @@ header {
   @apply bg-[var(--primary-color)] text-[var(--secondary-color)] pt-6 text-center;
 }
 
+.header-h1 {
+  @apply font-rogria font-bold text-[3rem] pb-4 tracking-wider text-[var(--secondary-color)] sm:text-[4rem] lg:text-[6rem] lg:pb-0;
+}
+
+.header-h2 {
+  @apply font-verdana text-[1.1rem] -mt-8 tracking-wider sm:text-[1.3rem] lg:text-[1.5rem];
+}
+
 nav {
-  @apply sticky top-0 mt-0 gap-10 px-15 py-7 text-2xl bg-[var(--primary-color)];
+  @apply sticky top-0 mt-0 gap-5 px-10 py-7 text-2xl bg-[var(--primary-color)] sm:px-15 sm:gap-10;
 }
 
 .nav1 {
@@ -77,7 +85,7 @@ nav {
 }
 
 .nav2 {
-  @apply grid-cols-12 hidden max-[768px]:grid;
+  @apply grid-cols-4 hidden max-[768px]:grid;
 }
 
 main {
@@ -97,5 +105,5 @@ footer > section {
 }
 
 .header-button {
-  @apply bg-[var(--secondary-color)] text-[var(--primary-color)] font-blona text-[1.5rem] tracking-widest px-5 py-1 rounded-xl  uppercase col-span-3 drop-shadow-xl shadow-[10px_10px_0_var(--dark-color)] hover:scale-104 duration-500;
+  @apply bg-[var(--secondary-color)] text-[var(--primary-color)] font-blona text-[1.2rem] tracking-widest py-1 rounded-xl  uppercase col-span-3 drop-shadow-xl shadow-[10px_10px_0_var(--dark-color)] hover:scale-104 duration-500 sm:text-[1.5rem] max-[768px]:col-span-1;
 }
