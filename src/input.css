@@ -77,7 +77,7 @@ header {
 }
 
 nav {
-  @apply sticky top-0 mt-0 gap-5 px-10 py-7 text-2xl bg-[var(--primary-color)] sm:px-15 sm:gap-10;
+  @apply sticky top-0 mt-0 gap-5 px-10 py-7 text-2xl bg-[var(--primary-color)] sm:px-15 sm:gap-10 z-10;
 }
 
 .nav1 {
@@ -107,3 +107,42 @@ footer > section {
 .header-button {
   @apply bg-[var(--secondary-color)] text-[var(--primary-color)] font-blona text-[1.2rem] tracking-widest py-1 rounded-xl  uppercase col-span-3 drop-shadow-xl shadow-[10px_10px_0_var(--dark-color)] hover:scale-104 duration-500 sm:text-[1.5rem] max-[768px]:col-span-1;
 }
+
+/* design ni ronmel */
+.mainpage {
+  @apply sm:px-20 pt-4 pb-4 flex gap-10 max-[768px]:gap-0 max-[640px]:px-10 max-[506px]:px-5 max-[768px]:pt-0;
+}
+
+.sidebar-h3 {
+  @apply text-center text-[var(--secondary-color)] bg-[var(--primary-color)] pt-2 rounded-t-2xl font-blona text-[2.5rem] tracking-wider max-lg:text-[2rem];
+}
+
+.sidebar-div {
+  @apply w-[15rem] bg-[var(--secondary-color)] rounded-2xl shadow-[-35px_30px_0_var(--dark-color)] max-lg:w-[13rem] sticky top-28 xl:top-28 md:top-50 max-[768px]:hidden;
+}
+
+.mainpage-h3 {
+  @apply text-[var(--primary-color)] font-blona text-[2.5rem] tracking-wider max-[768px]:text-[2rem] max-[768px]:text-center max-[506px]:text-[1.5rem];
+}
+
+.sidebar-li {
+  @apply pb-2 text-[1.1rem] px-4 pl-7 font-verdana text-[var(--dark-color)] hover:font-bold;
+}
+
+.mainpage > div > p,
+.ADD_p {
+  @apply text-[var(--dark-color)] indent-8 font-verdana lg:text-[1.2rem] tracking-normal text-justify pb-3 min-[506px]:text-[1rem] max-[506px]:text-[0.8rem];
+}
+
+.mainpage > div > ul {
+  @apply list-disc pl-20 font-verdana lg:text-[1.2rem] tracking-normal text-justify pb-3 min-[506px]:text-[1rem] max-[506px]:text-[0.8rem] max-xl:pl-15 max-lg:pl-8 text-[var(--dark-color)];
+}
+
+.mainpage > div > ul > li {
+  @apply pb-2 text-[var(--dark-color)];
+}
+
+.figure-h1 {
+  @apply text-[var(--dark-color)] font-verdana italic lg:text-[1.2rem] tracking-normal text-center pb-1 min-[506px]:text-[1rem] max-[506px]:text-[0.8rem];
+}
+/* hanggang dito design ni ronmel */
