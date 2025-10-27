@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Blona';
-  src: url('./assets/fonts/BLONA.ttf');
+  font-family: 'Quano';
+  src: url('./assets/fonts/Quano.otf');
 }
 
 @font-face {
@@ -11,14 +11,15 @@
 }
 
 @theme {
-  --font-blona: 'Blona';
+  --font-quano: 'Quano';
   --font-rogria: 'Rogria';
   --font-verdana: Verdana;
 
-  --primary-color: #891515;
-  --secondary-color: #f4e9d7;
-  --light-color: #f2f2f2;
-  --dark-color: #222831;
+  --primary-color: #1e3a8a;
+  --secondary-color: #93b4d1;
+  --tertiary-color: #adcbe3;
+  --light-color: #e0e0e0;
+  --dark-color: #12112f;
 }
 
 .bg-primary-color {
@@ -27,6 +28,10 @@
 
 .bg-secondary-color {
   background-color: var(--secondary-color);
+}
+
+.bg-tertiary-color {
+  background-color: var(--tertiary-color);
 }
 
 .bg-light-color {
@@ -45,6 +50,10 @@
   color: var(--secondary-color);
 }
 
+.font-tertiary-color {
+  color: var(--tertiary-color);
+}
+
 .font-light-color {
   color: var(--light-color);
 }
@@ -53,57 +62,274 @@
   color: var(--dark-color);
 }
 
-.font-blona {
-  font-family: var(--font-blona);
+.font-quano {
+  font-family: var(--font-quano);
 }
 .font-verdana {
   font-family: var(--font-verdana);
 }
+.font-rogria {
+  font-family: var(--font-rogria);
+}
 
 body {
-  box-sizing: border-box;
+  @apply box-border bg-[var(--light-color)] overflow-x-hidden;
 }
 
-header {
-  @apply bg-[var(--primary-color)] text-[var(--secondary-color)] pt-6 text-center;
+@layer utilities {
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 }
-
-.header-h1 {
-  @apply font-rogria font-bold text-[3rem] pb-4 tracking-wider text-[var(--secondary-color)] sm:text-[4rem] lg:text-[6rem] lg:pb-0;
-}
-
-.header-h2 {
-  @apply font-verdana text-[1.1rem] -mt-8 tracking-wider sm:text-[1.3rem] lg:text-[1.5rem];
-}
-
-nav {
-  @apply sticky top-0 mt-0 gap-5 px-10 py-7 text-2xl bg-[var(--primary-color)] sm:px-15 sm:gap-10;
-}
-
-.nav1 {
-  @apply grid-cols-1 grid max-[768px]:hidden md:px-30 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-12 xl:px-50;
+/* header */
+.homepage-header {
+  @apply sticky top-0 backdrop-blur-sm bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color)]/80 flex justify-around pt-7 pb-5 items-center z-50 pl-12;
 }
 
 .nav2 {
-  @apply grid-cols-4 hidden max-[768px]:grid;
-}
-
-main {
-  @apply bg-[var(--light-color)];
-}
-
-footer {
-  @apply bg-[var(--primary-color)] pt-8 pb-7 border-t-2 border-[var(--primary-color)];
-}
-
-footer > section {
-  @apply text-center gap-10 px-10;
-}
-
-.footer-names {
-  @apply text-[var(--secondary-color)] font-rogria tracking-widest lowercase col-span-3 text-[1.1rem];
+  @apply hidden;
 }
 
 .header-button {
-  @apply bg-[var(--secondary-color)] text-[var(--primary-color)] font-blona text-[1.2rem] tracking-widest py-1 rounded-xl  uppercase col-span-3 drop-shadow-xl shadow-[10px_10px_0_var(--dark-color)] hover:scale-104 duration-500 sm:text-[1.5rem] max-[768px]:col-span-1;
+  @apply mx-3 py-2 px-3 font-verdana rounded-md tracking-wide text-[var(--light-color)] hover:scale-105 duration-400 ease-in-out hover:bg-[var(--light-color)] hover:text-[var(--dark-color)];
 }
+
+.header-h1 {
+  @apply font-quano uppercase font-semibold text-[2rem] tracking-wider text-[var(--light-color)] hover:scale-105 duration-400 ease-in-out flex gap-2 items-center;
+}
+/* header */
+
+/* footer */
+.footer-container {
+  @apply bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color)]/80 py-8 px-5;
+}
+
+.footer-div1 {
+  @apply flex justify-around pb-7 border-b-2 border-[var(--light-color)];
+}
+.footer-div1 > div > h1 {
+  @apply font-quano font-semibold text-[1.1rem] uppercase tracking-widest text-[var(--light-color)];
+}
+
+.footer-container > div > div > p {
+  @apply text-[var(--light-color)] py-1 tracking-wide font-verdana;
+}
+
+.footer-container > div > div > h3 {
+  @apply text-[var(--light-color)] py-1 tracking-widest font-quano font-semibold text-[1.2rem];
+}
+
+.footer-container > div > h1 {
+  @apply font-quano font-semibold text-[1.2rem] uppercase tracking-widest text-[var(--light-color)];
+}
+
+.footer-img {
+  @apply bg-[var(--light-color)] h-12 p-2 rounded-full opacity-85;
+}
+/* footer */
+
+/* homepage design */
+main {
+  @apply px-10 pb-10;
+}
+
+.mainpage-div1 {
+  @apply bg-[var(--light-color)] px-50 py-30 text-center;
+}
+
+.mainpage-div1 > h1 {
+  @apply font-bold font-rogria text-[3rem] tracking-wider text-[var(--dark-color)] animate-[pop_3s_linear_infinite];
+}
+
+.mainpage-div1 > p {
+  @apply text-[1.1rem] text-center font-verdana text-[var(--dark-color)] text-balance;
+}
+
+.mainpage-div2 {
+  @apply border-l-5 border-[var(--primary-color)] bg-gradient-to-r from-[var(--secondary-color)] to-[var(--secondary-color)]/40  place-self-center p-10 px-20 relative shadow-2xl rounded-2xl mb-5;
+}
+
+.mainpage-div2 > ul {
+  @apply mt-4 flex flex-col gap-3 items-center;
+}
+
+.mainpage-div2 > ul > div {
+  @apply relative bg-[var(--light-color)] text-[var(--dark-color)] px-10 text-justify py-6 pl-12 rounded-lg font-verdana text-[1rem] w-95/100 hover:bg-[var(--primary-color)] hover:text-[var(--light-color)] translate-x-5 hover:translate-x-0 duration-500 hover:before:hidden;
+}
+
+.mainpage-div2 > ul > div::before {
+  @apply text-[1.2rem] border-5 border-[var(--secondary-color)] font-bold absolute top-1/2 -translate-y-1/2 left-[-1.6rem] px-5 py-3 rounded-full text-[var(--light-color)] bg-[var(--primary-color)];
+}
+
+.mainpage-div3 {
+  @apply grid grid-cols-2 px-0 py-15 gap-8 mb-5;
+}
+
+.mainpage-div3 > div {
+  @apply bg-[var(--tertiary-color)] border-t-4 border-[var(--primary-color)] p-10 px-10 ease-in-out duration-500 rounded-xl text-justify
+  hover:-translate-y-2 hover:shadow-2xl;
+}
+
+.mainpage-div3 > div > p {
+  @apply font-verdana text-[1rem] text-[var(--dark-color)];
+}
+
+.mainpage-div4 {
+  @apply flex flex-col pt-15 pb-10 px-30 items-center bg-[var(--light-color)] border-[var(--primary-color)] rounded-2xl border-1 border-l-5 shadow-xl;
+}
+
+.mainpage-div4 > h1 {
+  @apply font-quano uppercase text-[2rem] text-[var(--primary-color)] tracking-wider font-semibold;
+}
+
+.mainpage-div4 > div {
+  @apply flex flex-col gap-3 text-justify;
+}
+
+.img-h1 {
+  @apply font-quano text-[1rem] text-[var(--primary-color)] duration-1000 ease-in-out text-center uppercase;
+}
+
+.img-div {
+  @apply max-h-0 opacity-0 duration-100 ease-in-out -translate-x-1000 peer-checked:max-h-max peer-checked:translate-x-0 peer-checked:opacity-100 flex flex-col items-center;
+}
+
+.mainpage-div4 img {
+  @apply mb-5 w-[90%] rounded-3xl border-1 border-t-3 border-[var(--primary-color)];
+}
+
+.mainpage-div4 > p {
+  @apply font-verdana text-[1rem] indent-4 text-[var(--dark-color)] mb-2 text-justify;
+}
+
+.mainpage-div4 > div > div {
+  @apply bg-[var(--tertiary-color)] w-full border-t-3 border-[var(--primary-color)]  font-verdana text-[1.1rem] py-5 px-7 indent-4 text-[var(--dark-color)] hover:bg-[var(--primary-color)] rounded-lg hover:text-[var(--light-color)] duration-400 ease-in-out hover:scale-102;
+}
+
+.mainpage-div4 label h1 {
+  @apply pt-5 pb-2 text-[1.2rem];
+}
+
+.mainpage-div5 {
+  @apply py-15 px-15;
+}
+
+.mainpage-div5 > div h3 {
+  @apply font-quano uppercase text-[3rem] text-[var(--primary-color)];
+}
+
+.mainpage-div5 > div > p {
+  @apply font-verdana pb-5 text-[1.1rem] text-justify indent-10;
+}
+
+.advantage-div {
+  @apply flex items-center justify-between bg-[var(--primary-color)] text-white p-4 rounded-lg shadow-md transition-all duration-500 ease-in-out peer-checked:rounded-b-none peer-checked:shadow-lg;
+}
+
+.description-advantage-div {
+  @apply max-h-0 overflow-hidden opacity-0 scale-95 transition-all duration-700 ease-in-out peer-checked:max-h-96 peer-checked:opacity-100 peer-checked:scale-100 bg-gray-50 text-[var(--dark-color)] font-verdana p-0 peer-checked:p-4 peer-checked:pl-8 rounded-b-lg;
+}
+
+.advantage-span {
+  @apply transition-transform duration-500 ease-in-out peer-checked:rotate-180;
+}
+
+.mainpage-div5 > fieldset legend {
+  @apply font-quano uppercase text-[1.7rem] pb-4 text-[var(--primary-color)] text-center tracking-wider font-semibold;
+}
+
+.mainpage-div6 {
+  @apply p-15 px-20 bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color)]/70 flex flex-col gap-4 rounded-2xl;
+}
+
+.mainpage-div6 h1 {
+  @apply font-quano uppercase text-[2rem] tracking-wider text-[var(--light-color)];
+}
+
+.mainpage-div6 > div {
+  @apply bg-[var(--light-color)] text-[var(--dark-color)] rounded-lg font-verdana p-5 px-7 text-justify text-[1rem] relative hover:scale-102 duration-500 ease-in-out;
+}
+
+.software-role-div {
+  @apply line-clamp-1 peer-checked:line-clamp-none peer-checked:indent-8;
+}
+/* homepage design */
+
+/* chapter 6.1 design */
+.chapter1 {
+  @apply p-0;
+}
+
+.chapter1-div1 {
+  @apply bg-[var(--primary-color)] p-10 my-5 m-10 mr-0 rounded-l-2xl;
+}
+
+.chapter1-div1 > h1 {
+  @apply text-[var(--light-color)]  pb-5 pl-5  text-[3rem] font-semibold tracking-widest  uppercase font-rogria;
+}
+
+.chapter1-description-div1 {
+  @apply pl-15 indent-7 cursor-pointer hover:scale-102 duration-500 bg-[var(--light-color)] rounded-xl shadow-md items-center px-10 text-justify font-verdana text-[1.2rem] gap-10 py-9;
+}
+
+.chapter1-description-div1 > span {
+  @apply text-[var(--primary-color)] text-[3rem];
+}
+
+.chapter1-div2 {
+  @apply pb-2 mb-0 mt-5 m-10 ml-0;
+}
+
+.chapter1-div2 > div > div {
+  @apply bg-[var(--secondary-color)] border-2 border-[var(--secondary-color)] hover:-translate-y-2 duration-500 hover:bg-gradient-to-tl font-verdana col-span-1 p-5 px-7 rounded-2xl text-[var(--dark-color)] shadow-lg hover:shadow-2xl  text-[1.1rem];
+}
+
+.chapter1-div2 > h3 {
+  @apply bg-[var(--primary-color)] text-[var(--light-color)] tracking-wide pt-7 pl-20 rounded-r-2xl py-5 px-10 text-center font-quano text-[2rem] uppercase;
+}
+
+.chapter1-div3 {
+  @apply flex flex-col gap-3 border-3 border-[var(--primary-color)] shadow-lg border-r-0 p-10 ml-10 rounded-l-2xl;
+}
+
+.chapter1-description-div3 {
+  @apply pl-15 indent-7 text-justify cursor-pointer hover:scale-101 duration-500 bg-[var(--light-color)] rounded-xl shadow-md items-center px-10 font-verdana text-[1.1rem] gap-10 py-6 border-1 border-[var(--primary-color)];
+}
+
+.sub-title-div3 {
+  @apply text-[1.2rem] indent-0 tracking-wider peer-checked:hidden flex font-quano uppercase text-[var(--light-color)] bg-[var(--primary-color)];
+}
+
+.chapter1-div3 > h3 {
+  @apply text-[2rem] text-center uppercase pb-3 text-[var(--primary-color)] tracking-wider pr-10 font-semibold font-quano;
+}
+
+
+.chapter1-div4{
+  @apply bg-[var(--primary-color)] my-10 ; 
+}
+
+.chapter1-div4 > h1{
+  @apply bg-[var(--primary-color)] text-[var(--light-color)] py-10 font-quano uppercase text-[2rem] text-center pb-2; 
+}
+
+.chapter1-div4 >div > label{
+  @apply bg-[var(--light-color)] text-[1rem] px-15 rounded-lg py-1 font-verdana font-extrabold text-[var(--primary-color)] hover:scale-105 duration-500 ease-in-out; 
+}
+
+.chapter1-div4 > div >fieldset{
+  @apply bg-[var(--light-color)] text-[var(--dark-color)] font-verdana p-5 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out; 
+}
+
+.chapter1-div4 > div >fieldset > legend{
+  @apply indent-0 text-[4rem] bg-[var(--primary-color)] font-verdana font-bold px-10 text-[var(--light-color)] border-10 border-[var(--light-color)] py-3 rounded-full; 
+}
+/* chapter 6.1 design */
