@@ -17,7 +17,6 @@
 
   --primary-color: #1e3a8a;
   --secondary-color: #93b4d1;
-  --tertiary-color: #adcbe3;
   --light-color: #e0e0e0;
   --dark-color: #12112f;
 }
@@ -28,10 +27,6 @@
 
 .bg-secondary-color {
   background-color: var(--secondary-color);
-}
-
-.bg-tertiary-color {
-  background-color: var(--tertiary-color);
 }
 
 .bg-light-color {
@@ -48,10 +43,6 @@
 
 .font-secondary-color {
   color: var(--secondary-color);
-}
-
-.font-tertiary-color {
-  color: var(--tertiary-color);
 }
 
 .font-light-color {
@@ -91,7 +82,7 @@ body {
 }
 /* header */
 .homepage-header {
-  @apply sticky top-0 backdrop-blur-sm bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color)]/80 flex justify-around pt-7 pb-5 items-center z-50 pl-12;
+  @apply sticky top-0 backdrop-blur-sm bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color)]/80 flex justify-around pt-7 pb-5 items-center z-50;
 }
 
 .nav2 {
@@ -103,7 +94,7 @@ body {
 }
 
 .header-h1 {
-  @apply font-quano uppercase font-semibold text-[2rem] tracking-wider text-[var(--light-color)] hover:scale-105 duration-400 ease-in-out flex gap-2 items-center;
+  @apply font-rogria  uppercase font-semibold text-[2rem] tracking-widest text-[var(--light-color)] hover:scale-105 duration-400 ease-in-out flex gap-2 items-center;
 }
 /* header */
 
@@ -174,7 +165,7 @@ main {
 }
 
 .mainpage-div3 > div {
-  @apply bg-[var(--tertiary-color)] border-t-4 border-[var(--primary-color)] p-10 px-10 ease-in-out duration-500 rounded-xl text-justify
+  @apply bg-[var(--secondary-color)] border-t-4 border-[var(--primary-color)] p-10 px-10 ease-in-out duration-500 rounded-xl text-justify
   hover:-translate-y-2 hover:shadow-2xl;
 }
 
@@ -211,7 +202,7 @@ main {
 }
 
 .mainpage-div4 > div > div {
-  @apply bg-[var(--tertiary-color)] w-full border-t-3 border-[var(--primary-color)]  font-verdana text-[1.1rem] py-5 px-7 indent-4 text-[var(--dark-color)] hover:bg-[var(--primary-color)] rounded-lg hover:text-[var(--light-color)] duration-400 ease-in-out hover:scale-102;
+  @apply bg-[var(--secondary-color)] w-full border-t-3 border-[var(--primary-color)]  font-verdana text-[1.1rem] py-5 px-7 indent-4 text-[var(--dark-color)] hover:bg-[var(--primary-color)] rounded-lg hover:text-[var(--light-color)] duration-400 ease-in-out hover:scale-102;
 }
 
 .mainpage-div4 label h1 {
@@ -231,7 +222,7 @@ main {
 }
 
 .advantage-div {
-  @apply flex items-center justify-between bg-[var(--primary-color)] text-white p-4 rounded-lg shadow-md transition-all duration-500 ease-in-out peer-checked:rounded-b-none peer-checked:shadow-lg;
+  @apply flex items-center justify-between bg-[var(--primary-color)] border-1 text-[var(--light-color)] p-4 rounded-lg shadow-md transition-all duration-500 ease-in-out peer-checked:rounded-b-none peer-checked:shadow-lg;
 }
 
 .description-advantage-div {
@@ -247,15 +238,16 @@ main {
 }
 
 .mainpage-div6 {
-  @apply p-15 px-20 bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color)]/70 flex flex-col gap-4 rounded-2xl;
+  @apply p-15 px-20 bg-[var(--light-color)] flex flex-col gap-4 border-1 border-l-5 border-[var(--primary-color)]
+  rounded-2xl;
 }
 
 .mainpage-div6 h1 {
-  @apply font-quano uppercase text-[2rem] tracking-wider text-[var(--light-color)];
+  @apply font-quano uppercase font-semibold text-[2rem] tracking-wider text-[var(--primary-color)];
 }
 
 .mainpage-div6 > div {
-  @apply bg-[var(--light-color)] text-[var(--dark-color)] rounded-lg font-verdana p-5 px-7 text-justify text-[1rem] relative hover:scale-102 duration-500 ease-in-out;
+  @apply bg-[var(--secondary-color)] text-[var(--dark-color)] rounded-lg font-verdana p-5 px-7 text-justify text-[1rem] relative hover:scale-102 duration-500 ease-in-out;
 }
 
 .software-role-div {
@@ -312,24 +304,23 @@ main {
   @apply text-[2rem] text-center uppercase pb-3 text-[var(--primary-color)] tracking-wider pr-10 font-semibold font-quano;
 }
 
-
-.chapter1-div4{
-  @apply bg-[var(--primary-color)] my-10 ; 
+.chapter1-div4 {
+  @apply bg-[var(--primary-color)] my-10;
 }
 
-.chapter1-div4 > h1{
-  @apply bg-[var(--primary-color)] text-[var(--light-color)] py-10 font-quano uppercase text-[2rem] text-center pb-2; 
+.chapter1-div4 > h1 {
+  @apply bg-[var(--primary-color)] text-[var(--light-color)] py-10 font-quano uppercase text-[2rem] text-center pb-2;
 }
 
-.chapter1-div4 >div > label{
-  @apply bg-[var(--light-color)] text-[1rem] px-15 rounded-lg py-1 font-verdana font-extrabold text-[var(--primary-color)] hover:scale-105 duration-500 ease-in-out; 
+.chapter1-div4 > div > label {
+  @apply bg-[var(--light-color)] text-[1rem] px-15 rounded-lg py-1 font-verdana font-extrabold text-[var(--primary-color)] hover:scale-105 duration-500 ease-in-out;
 }
 
-.chapter1-div4 > div >fieldset{
-  @apply bg-[var(--light-color)] text-[var(--dark-color)] font-verdana p-5 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out; 
+.chapter1-div4 > div > fieldset {
+  @apply bg-[var(--light-color)] text-[var(--dark-color)] font-verdana p-5 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out;
 }
 
-.chapter1-div4 > div >fieldset > legend{
-  @apply indent-0 text-[4rem] bg-[var(--primary-color)] font-verdana font-bold px-10 text-[var(--light-color)] border-10 border-[var(--light-color)] py-3 rounded-full; 
+.chapter1-div4 > div > fieldset > legend {
+  @apply indent-0 text-[4rem] bg-[var(--primary-color)] font-verdana font-bold px-10 text-[var(--light-color)] border-10 border-[var(--light-color)] py-3 rounded-full;
 }
 /* chapter 6.1 design */
