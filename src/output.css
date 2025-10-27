@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-gray-50: oklch(98.5% 0.002 247.839);
-    --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -33,7 +32,6 @@
     --font-verdana: Verdana;
     --primary-color: #1e3a8a;
     --secondary-color: #93b4d1;
-    --tertiary-color: #adcbe3;
     --light-color: #e0e0e0;
     --dark-color: #12112f;
   }
@@ -455,9 +453,6 @@
 .bg-secondary-color {
   background-color: var(--secondary-color);
 }
-.bg-tertiary-color {
-  background-color: var(--tertiary-color);
-}
 .bg-light-color {
   background-color: var(--light-color);
 }
@@ -469,9 +464,6 @@
 }
 .font-secondary-color {
   color: var(--secondary-color);
-}
-.font-tertiary-color {
-  color: var(--tertiary-color);
 }
 .font-light-color {
   color: var(--light-color);
@@ -520,7 +512,6 @@ body {
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   padding-top: calc(var(--spacing) * 7);
   padding-bottom: calc(var(--spacing) * 5);
-  padding-left: calc(var(--spacing) * 12);
   --tw-backdrop-blur: blur(var(--blur-sm));
   -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
@@ -564,12 +555,12 @@ body {
   display: flex;
   align-items: center;
   gap: calc(var(--spacing) * 2);
-  font-family: var(--font-quano);
+  font-family: var(--font-rogria);
   font-size: 2rem;
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
-  --tw-tracking: var(--tracking-wider);
-  letter-spacing: var(--tracking-wider);
+  --tw-tracking: var(--tracking-widest);
+  letter-spacing: var(--tracking-widest);
   color: var(--light-color);
   text-transform: uppercase;
   --tw-duration: 400ms;
@@ -770,7 +761,7 @@ main {
   border-top-style: var(--tw-border-style);
   border-top-width: 4px;
   border-color: var(--primary-color);
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   padding: calc(var(--spacing) * 10);
   padding-inline: calc(var(--spacing) * 10);
   text-align: justify;
@@ -887,7 +878,7 @@ main {
   border-top-style: var(--tw-border-style);
   border-top-width: 3px;
   border-color: var(--primary-color);
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   padding-inline: calc(var(--spacing) * 7);
   padding-block: calc(var(--spacing) * 5);
   text-indent: calc(var(--spacing) * 4);
@@ -944,9 +935,11 @@ main {
   align-items: center;
   justify-content: space-between;
   border-radius: var(--radius-lg);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
   background-color: var(--primary-color);
   padding: calc(var(--spacing) * 4);
-  color: var(--color-white);
+  color: var(--light-color);
   --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   transition-property: all;
@@ -1034,26 +1027,29 @@ main {
   flex-direction: column;
   gap: calc(var(--spacing) * 4);
   border-radius: var(--radius-2xl);
-  --tw-gradient-position: to right in oklab;
-  background-image: linear-gradient(var(--tw-gradient-stops));
-  --tw-gradient-from: var(--primary-color);
-  --tw-gradient-to: color-mix(in oklab, var(--primary-color) 70%, transparent);
-  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-left-style: var(--tw-border-style);
+  border-left-width: 5px;
+  border-color: var(--primary-color);
+  background-color: var(--light-color);
   padding: calc(var(--spacing) * 15);
   padding-inline: calc(var(--spacing) * 20);
 }
 .mainpage-div6 h1 {
   font-family: var(--font-quano);
   font-size: 2rem;
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
   --tw-tracking: var(--tracking-wider);
   letter-spacing: var(--tracking-wider);
-  color: var(--light-color);
+  color: var(--primary-color);
   text-transform: uppercase;
 }
 .mainpage-div6 > div {
   position: relative;
   border-radius: var(--radius-lg);
-  background-color: var(--light-color);
+  background-color: var(--secondary-color);
   padding: calc(var(--spacing) * 5);
   padding-inline: calc(var(--spacing) * 7);
   text-align: justify;
@@ -1286,7 +1282,7 @@ main {
   color: var(--light-color);
   text-transform: uppercase;
 }
-.chapter1-div4 >div > label {
+.chapter1-div4 > div > label {
   border-radius: var(--radius-lg);
   background-color: var(--light-color);
   padding-inline: calc(var(--spacing) * 15);
@@ -1309,7 +1305,7 @@ main {
     }
   }
 }
-.chapter1-div4 > div >fieldset {
+.chapter1-div4 > div > fieldset {
   border-radius: var(--radius-2xl);
   background-color: var(--light-color);
   padding: calc(var(--spacing) * 5);
@@ -1325,7 +1321,7 @@ main {
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
 }
-.chapter1-div4 > div >fieldset > legend {
+.chapter1-div4 > div > fieldset > legend {
   border-radius: calc(infinity * 1px);
   border-style: var(--tw-border-style);
   border-width: 10px;
