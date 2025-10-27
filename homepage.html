@@ -8,311 +8,383 @@
   </head>
 
   <body>
-    <header>
-      <h1 class="header-h1">
-        <a href="homepage.html">CHAPTER 6</a>
-      </h1>
-      <h2 class="header-h2">ARCHITECTURAL DESIGN</h2>
+    <header class="homepage-header">
+      <div class="header-h1">
+        <a href="homepage.html">
+          <img class="h-12" src="/src/assets/img/logo.png" alt="haha" />
+        </a>
+        <a href="homepage.html"> <h1 class="pt-1.5">Chapter Sixth</h1> </a>
+      </div>
+
+      <nav class="homepage-nav nav1">
+        <button class="header-button">
+          <a href="chapter_6-1.html">Architectural Design Decisions</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">Architectural Views</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">Architectural Patterns</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">Application Architectures</a>
+        </button>
+      </nav>
+
+      <nav class="homepage-nav nav2">
+        <button class="header-button">
+          <a href="chapter_6-1.html">6.1</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">6.2</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">6.3</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">6.4</a>
+        </button>
+      </nav>
     </header>
 
-    <nav class="nav1">
-      <button class="header-button">
-        <a href="chapter_6-1.html">Chapter 6.1</a>
-      </button>
-      <button class="header-button">
-        <a href="6.2.html">Chapter 6.2</a>
-      </button>
-      <button class="header-button">
-        <a href="Chapter6_3.html">Chapter 6.3</a>
-      </button>
-      <button class="header-button">
-        <a href="Chapter6.4.html">Chapter 6.4</a>
-      </button>
-    </nav>
-
-    <nav class="nav2">
-      <button class="header-button">
-        <a href="chapter_6-1.html">6.1</a>
-      </button>
-      <button class="header-button">
-        <a href="6.2.html">6.2</a>
-      </button>
-      <button class="header-button">
-        <a href="Chapter6_3.html">6.3</a>
-      </button>
-      <button class="header-button">
-        <a href="Chapter6.4.html">6.4</a>
-      </button>
-    </nav>
-
     <main class="mainpage">
-      <div>
-        <div class="sidebar-div">
-          <h3 class="sidebar-h3">Contents</h3>
-          <ul class="py-3">
-            <li class="sidebar-li">
-              <a href="chapter_6-1.html"
-                ><strong class="font-primary-color">6.1</strong> Architectural
-                design decisions</a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a href="6.2.html"
-                ><strong class="font-primary-color">6.2</strong> Architectural
-                views</a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a href="Chapter6_3.html"
-                ><strong class="font-primary-color">6.3</strong> Architectural
-                patterns</a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a href="Chapter6.4.html"
-                ><strong class="font-primary-color">6.4</strong> Application
-                architectures</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <h3 class="mainpage-h3">Objectives</h3>
-        <p>
-          The objective of this chapter is to introduce the concepts of software
-          architecture and architectural design. When you have read the chapter,
-          you will.
-        </p>
-        <ul>
-          <li>
-            understand why the architectural design of software is important;
-          </li>
-          <li>
-            understand the decisions that have to be made about the system
-            architecture during the architectural design process;
-          </li>
-          <li>
-            have been introduced to the idea of architectural patterns,
-            well-tried ways of organizing system architectures, which can reused
-            in system designs;
-          </li>
-          <li>
-            know the architectural patterns that are often used in different
-            types of application system, including transaction processing
-            systems and language processing systems.
-          </li>
-        </ul>
-
+      <div class="mainpage-div1">
+        <h1>ARCHITECTURAL DESIGN</h1>
         <p>
           Architectural design is concerned with understanding how a system
           should be organized and designing the overall structure of that
-          system. In the model of the soft ware development process, as shown in
-          Chapter 2, architectural design is the first stage in the software
-          design process. It is the critical link between design and
-          requirements engineering, as it identifies the main structural
-          components in a system and the relationships between them. The output
-          of the architectural design process is an architectural model that
-          describes how the system is organized as a set of commu nicating
-          components.
-        </p>
-
-        <p>
-          In agile processes, it is generally accepted that an early stage of
-          the development process should be concerned with establishing an
-          overall system architecture. Incremental development of architectures
-          is not usually successful. While refactor ing components in response
-          to changes is usually relatively easy, refactoring a sys tem
-          architecture is likely to be expensive.
-        </p>
-
-        <p>
-          To help you understand what I mean by system architecture, consider
-          Figure 6.1. This shows an abstract model of the architecture for a
-          packing robot system that shows the components that have to be
-          developed. This robotic system can pack dif ferent kinds of object. It
-          uses a vision component to pick out objects on a conveyor, identify
-          the type of object, and select the right kind of packaging. The system
-          then moves objects from the delivery conveyor to be packaged. It
-          places packaged objects on another conveyor. The architectural model
-          shows these components and the links between them.
-        </p>
-
-        <p>
-          In practice, there is a significant overlap between the processes of
-          requirements engineering and architectural design. Ideally, a system
-          specification should not include any design information. This is
-          unrealistic except for very small systems. Architectural decomposition
-          is usually necessary to structure and organize the spec ification.
-          Therefore, as part of the requirements engineering process, you might
-          pro pose an abstract system architecture where you associate groups of
-          system functions or features with large-scale components or
-          sub-systems. You can then use this decomposition to discuss the
-          requirements and features of the system with stake holders.
-        </p>
-
-        <p>
-          You can design software architectures at two levels of abstraction,
-          which I call
-          <i class="font-primary-color"
-            >architecture in the small and architecture in the large:</i
-          >
-        </p>
-
-        <ul>
-          <li>
-            Architecture in the small is concerned with the architecture of
-            individual pro grams. At this level, we are concerned with the way
-            that an individual program is decomposed into components. This
-            chapter is mostly concerned with pro gram architectures.
-          </li>
-          <li>
-            Architecture in the large is concerned with the architecture of
-            complex enter prise systems that include other systems, programs,
-            and program compo nents. These enterprise systems are distributed
-            over different computers, which may be owned and managed by
-            different companies. I cover architec ture in the large in Chapters
-            18 and 19, where I discuss distributed systems architectures.
-          </li>
-        </ul>
-
-        <label class="flex flex-col items-center cursor-pointer">
-          <input type="checkbox" class="peer hidden" />
-
-          <h1 class="figure-h1 font-primary-color font-bold">Figure 6.1</h1>
-
-          <div
-            class="max-h-0 opacity-0 duration-1000 ease-in-out peer-checked:max-h-[1000px] peer-checked:opacity-100"
-          >
-            <h1 class="figure-h1">
-              The architecture of a packing robot control system
-            </h1>
-            <img
-              class="shadow-[0px_0px_50px_var(--secondary-color)] rounded-4xl mb-5"
-              src="src/assets/img/img6_1.jpg"
-              alt="Figure 6.1"
-            />
-          </div>
-        </label>
-
-        <p>
-          Software architecture is important because it affects the performance,
-          robustness, distributability, and maintainability of a system (Bosch,
-          2000). As Bosch discusses, individual components implement the
-          functional system requirements. The non functional requirements depend
-          on the system architecture—the way in which these components are
-          organized and communicate. In many systems, non-functional
-          requirements are also influenced by individual components, but there
-          is no doubt that the architecture of the system is the dominant
-          influence.
-        </p>
-        <p>
-          Bass et al. (2003) discuss three advantages of explicitly designing
-          and document ing software architecture:
-        </p>
-
-        <ul>
-          <li>
-            Stakeholder communicationThe architecture is a high-level
-            presentation of the sys tem that may be used as a focus for
-            discussion by a range of different stakeholders.
-          </li>
-          <li>
-            System analysis Making the system architecture explicit at an early
-            stage in the system development requires some analysis.
-            Architectural design decisions have a profound effect on whether or
-            not the system can meet critical require ments such as performance,
-            reliability, and maintainability.
-          </li>
-          <li>
-            Large-scale reuse A model of a system architecture is a compact,
-            manageable description of how a system is organized and how the
-            components interoperate. The system architecture is often the same
-            for systems with similar requirements and so can support large-scale
-            software reuse. As I explain in Chapter 16, it may be possible to
-            develop product-line architectures where the same architecture is
-            reused across a range of related systems.
-          </li>
-        </ul>
-
-        <p>
-          Hofmeister et al. (2000) propose that a software architecture can
-          serve firstly as a design plan for the negotiation of system
-          requirements, and secondly as a means of structuring discussions with
-          clients, developers, and managers. They also suggest that it is an
-          essential tool for complexity management. It hides details and allows
-          the designers to focus on the key system abstractions.
-        </p>
-
-        <p>
-          System architectures are often modeled using simple block diagrams, as
-          in Figure 6.1. Each box in the diagram represents a component. Boxes
-          within boxes indicate that the component has been decomposed to
-          sub-components. Arrows mean that data and or con trol signals are
-          passed from component to component in the direction of the arrows. You
-          can see many examples of this type of architectural model in Booch’s
-          software architec ture catalog (Booch, 2009).
-        </p>
-
-        <p>
-          Block diagrams present a high-level picture of the system structure,
-          which people from different disciplines, who are involved in the
-          system development process, can readily understand. However, in spite
-          of their widespread use, Bass et al. (2003) dis like informal block
-          diagrams for describing an architecture. They claim that these
-          informal diagrams are poor architectural representations, as they show
-          neither the type of the relationships among system components nor the
-          components’ externally visible properties.
-        </p>
-
-        <p>
-          The apparent contradictions between practice and architectural theory
-          arise because there are two ways in which an architectural model of a
-          program is used:
-        </p>
-
-        <ul>
-          <li>
-            As a way of facilitating discussion about the system design A
-            high-level architectural view of a system is useful for
-            communication with system stake holders and project planning because
-            it is not cluttered with detail. Stake holders can relate to it and
-            understand an abstract view of the system. They can then discuss the
-            system as a whole without being confused by detail. The
-            architectural model identifies the key components that are to be
-            developed so managers can start assigning people to plan the
-            development of these systems.
-          </li>
-          <li>
-            As a way of documenting an architecture that has been designed The
-            aim here is to produce a complete system model that shows the
-            different components in a system, their interfaces, and their
-            connections. The argument for this is that such a detailed
-            architectural description makes it easier to understand and evolve
-            the system.
-          </li>
-        </ul>
-
-        <p>
-          Block diagrams are an appropriate way of describing the system
-          architecture dur ing the design process, as they are a good way of
-          supporting communications between the people involved in the process.
-          In many projects, these are often the only architectural documentation
-          that exists. However, if the architecture of a system is to be
-          thoroughly documented then it is better to use a notation with
-          well-defined semantics for architectural description. However, as I
-          discuss in Section 6.2, some people think that detailed documentation
-          is neither useful, nor really worth the cost of its development
+          system. It is the critical link between design and requirements
+          engineering, as it identifies the main structural components in a
+          system and the relationships between them. The output of the
+          architectural design process is an architectural model that describes
+          how the system is organized as a set of commu nicating components.
         </p>
       </div>
-    </main>
-    <footer>
-      <section>
-        <div class="footer-names">©Harrysort</div>
-        <div class="footer-names">
-          Andaya, CAsanova, Carbonilla, De Los Santos
+
+      <div class="mainpage-div2">
+        <h1
+          class="font-quano text-center border-b-2 tracking-wide text-[2.5rem] font-semibold font-primary-color"
+        >
+          OBJECTIVES
+        </h1>
+
+        <ul>
+          <div class="before:content-['1']">
+            <li>
+              Understand why the architectural design of software is important.
+            </li>
+          </div>
+          <div class="before:content-['2']">
+            <li>
+              Understand the decisions that have to be made about the system
+              architecture during the architectural design process.
+            </li>
+          </div>
+          <div class="before:content-['3']">
+            <li>
+              Introduced to the idea of architectural patterns, well-tried ways
+              of organizing system architectures, which can reused in system
+              designs.
+            </li>
+          </div>
+          <div class="before:content-['4']">
+            <li>
+              Know the architectural patterns that are often used in different
+              types of application system, including transaction processing
+              systems and language processing systems.
+            </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="mainpage-div3">
+        <div class="flex items-center gap-7">
+          <span class="text-[5rem] font-primary-color">☍</span>
+
+          <p>
+            In agile processes, it is generally accepted that an early stage of
+            the development process should be concerned with establishing an
+            overall system architecture.
+          </p>
         </div>
-      </section>
+
+        <div class="flex items-center gap-7">
+          <span class="text-[4rem] font-primary-color">⧉</span>
+
+          <p>
+            Incremental development of architectures is not usually successful.
+            While refactoring components in response to changes is usually
+            relatively easy, refactoring a sys tem architecture is likely to be
+            expensive.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-7">
+          <span class="text-[4rem] font-primary-color">★</span>
+
+          <p>
+            Architectural decomposition is usually necessary to structure and
+            organize the specification. You can then use this decomposition to
+            discuss the requirements and features of the system with stake
+            holders.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-7">
+          <span class="text-[4rem] font-primary-color">⛮</span>
+
+          <p>
+            The system then moves objects from the delivery conveyor to be
+            packaged. It places packaged objects on another conveyor. The
+            architectural model shows these components and the links between
+            them.
+          </p>
+        </div>
+      </div>
+
+      <div class="mainpage-div4">
+        <h1>The architecture of a packing robot control system</h1>
+        <p>
+          You can design software architectures at two levels of abstraction,
+          which I call architecture in the small and architecture in the large
+        </p>
+
+        <div>
+          <div>
+            Architecture in the small is concerned with the architecture of
+            individual programs. At this level, we are concerned with the way
+            that an individual program is decomposed into components. This
+            chapter is mostly concerned with program architectures.
+          </div>
+          <div>
+            Architecture in the large is concerned with the architecture of
+            complex enterprise systems that include other systems, programs, and
+            components. These systems are distributed across different computers
+            and organizations.
+          </div>
+        </div>
+
+        <label class="flex flex-col cursor-pointer">
+          <input type="checkbox" class="peer hidden" />
+
+          <h1 class="img-h1">➤ Packing robot control system FIGURE</h1>
+
+          <div class="img-div">
+            <img src="src/assets/img/img6_1.jpg" alt="Figure 6.1" />
+          </div>
+        </label>
+      </div>
+
+      <div class="mainpage-div5">
+        <div class="flex flex-col">
+          <h3>Why Software Architecture Matters</h3>
+          <p>
+            Software architecture is important because it affects the
+            performance, robustness, distributability, and maintainability of a
+            system (Bosch, 2000). As Bosch discusses, individual components
+            implement the functional system requirements. The non functional
+            requirements depend on the system architecture—the way in which
+            these components are organized and communicate. In many systems,
+            non-functional requirements are also influenced by individual
+            components, but there is no doubt that the architecture of the
+            system is the dominant influence.
+          </p>
+        </div>
+
+        <fieldset class="border-t-2 border-[var(--primary-color)]">
+          <legend>Three Key Advantages</legend>
+
+          <div class="flex flex-col">
+            <label class="cursor-pointer block">
+              <input type="checkbox" class="peer hidden" />
+
+              <div class="advantage-div">
+                <span class="font-medium">Stakeholder Communication</span>
+                <span class="advantage-span"> ▼ </span>
+              </div>
+
+              <div class="description-advantage-div">
+                The architecture is a high-level presentation of the system that
+                may be used as a focus for discussion by a range of different
+                stakeholders.
+              </div>
+            </label>
+
+            <label class="cursor-pointer block mt-4">
+              <input type="checkbox" class="peer hidden" />
+
+              <div class="advantage-div">
+                <span class="font-medium">System Analysis</span>
+                <span class="advantage-span"> ▼ </span>
+              </div>
+
+              <div class="description-advantage-div">
+                Architectural design decisions have a profound effect on whether
+                the system can meet critical requirements such as performance,
+                reliability, and maintainability.
+              </div>
+            </label>
+
+            <label class="cursor-pointer block mt-4">
+              <input type="checkbox" class="peer hidden" />
+
+              <div class="advantage-div">
+                <span class="font-medium">Large-Scale Reuse</span>
+                <span class="advantage-span"> ▼ </span>
+              </div>
+
+              <div class="description-advantage-div">
+                The architecture is a reusable framework that promotes
+                consistent design practices across multiple projects and
+                systems.
+              </div>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="mainpage-div6">
+        <h1>The Role of Software Architecture in System Design</h1>
+        <div>
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="peer hidden" />
+            <div class="software-role-div">
+              Hofmeister et al. (2000) propose that a software architecture can
+              serve firstly as a design plan for the negotiation of system
+              requirements, and secondly as a means of structuring discussions
+              with clients, developers, and managers. They also suggest that it
+              is an essential tool for complexity management. It hides details
+              and allows the designers to focus on the key system abstractions.
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="peer hidden" />
+            <div class="software-role-div">
+              System architectures are often modeled using simple block
+              diagrams, as in Figure 6.1. Each box in the diagram represents a
+              component. Boxes within boxes indicate that the component has been
+              decomposed to sub-components. Arrows mean that data and or control
+              signals are passed from component to component in the direction of
+              the arrows. You can see many examples of this type of
+              architectural model in Booch’s software architecture catalog
+              (Booch, 2009).
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="peer hidden" />
+            <div class="software-role-div">
+              Block diagrams present a high-level picture of the system
+              structure, which people from different disciplines, who are
+              involved in the system development process, can readily
+              understand. However, in spite of their widespread use, Bass et al.
+              (2003) dis like informal block diagrams for describing an
+              architecture. They claim that these informal diagrams are poor
+              architectural representations, as they show neither the type of
+              the relationships among system components nor the components’
+              externally visible properties.
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="peer hidden" />
+            <div class="software-role-div">
+              Block diagrams are an appropriate way of describing the system
+              architecture dur ing the design process, as they are a good way of
+              supporting communications between the people involved in the
+              process. In many projects, these are often the only architectural
+              documentation that exists. However, if the architecture of a
+              system is to be thoroughly documented then it is better to use a
+              notation with well-defined semantics for architectural
+              description. However, as I discuss in Section 6.2, some people
+              think that detailed documentation is neither useful, nor really
+              worth the cost of its development
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="peer hidden" />
+            <div class="software-role-div">
+              As a way of facilitating discussion about the system design A
+              high-level architectural view of a system is useful for
+              communication with system stake holders and project planning
+              because it is not cluttered with detail. Stake holders can relate
+              to it and understand an abstract view of the system. They can then
+              discuss the system as a whole without being confused by detail.
+              The architectural model identifies the key components that are to
+              be developed so managers can start assigning people to plan the
+              development of these systems.
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="peer hidden" />
+            <div class="software-role-div">
+              As a way of documenting an architecture that has been designed The
+              aim here is to produce a complete system model that shows the
+              different components in a system, their interfaces, and their
+              connections. The argument for this is that such a detailed
+              architectural description makes it easier to understand and evolve
+              the system.
+            </div>
+          </label>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-container">
+      <div class="footer-div1">
+        <div class="flex flex-col gap-1">
+          <img class="h-25 w-25" src="/src/assets/img/logo.png" alt=" " />
+          <h1>Architectural Design</h1>
+        </div>
+        <div>
+          <h3>NAME</h3>
+          <p>Andaya, Ronmel D.</p>
+          <p>Carbonilla, Marjorie B.</p>
+          <p>Casanova, Johnharry S.</p>
+          <p>De Los Santos, Maricar R.</p>
+        </div>
+        <div>
+          <h3>CONTACTS</h3>
+          <p>andayaronmel@gmail.com</p>
+          <p>carbonillamarjorie@gmail.com</p>
+          <p>casanovajohnharry@gmail.com</p>
+          <p>delossantosmaricar@gmail.com</p>
+        </div>
+      </div>
+      <div class="flex justify-between px-20 pt-8 items-center">
+        <h1>@HARRYSORT - BS INFORMATION TECHNOLOGY</h1>
+        <div class="flex items-center gap-4">
+          <div>
+            <img class="footer-img" src="/src/assets/img/ig-icon.png" alt="" />
+          </div>
+          <div>
+            <img
+              class="footer-img"
+              src="/src/assets/img/icon-facebook.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="footer-img"
+              src="/src/assets/img/icon-twitter.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
