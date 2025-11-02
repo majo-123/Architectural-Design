@@ -1901,6 +1901,9 @@ body {
   @media (width < 410px) {
     padding-inline: calc(var(--spacing) * 3);
   }
+  @media (width >= 823px) {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
 }
 .mainpage-div6 h1 {
   font-family: var(--font-quano);
