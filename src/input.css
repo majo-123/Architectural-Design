@@ -622,22 +622,96 @@ body {
 }
 
 .chapter1-div4 {
-  @apply bg-[var(--primary-color)]/85 my-10;
+  @apply bg-[var(--primary-color)]/85 my-10
+  
+  max-[475px]:my-5;
 }
 
 .chapter1-div4 > h1 {
-  @apply text-[var(--light-color)] py-10 font-quano uppercase text-[2rem] text-center pb-2;
+  @apply text-[var(--light-color)] py-10 font-quano uppercase text-[2rem] text-center pb-2
+  
+  max-[1410px]:text-[1.8rem]
+  max-[1265px]:text-[1.5rem]
+  max-[1060px]:text-[1.3rem]
+  max-[1003px]:text-[1rem]
+  max-[475px]:text-[0.8rem]
+  max-[392px]:text-[0.7rem]
+
+  max-[475px]:pt-7;
 }
 
 .chapter1-div4 > div > label {
-  @apply bg-[var(--light-color)] text-[1rem] px-15 rounded-lg py-1 font-verdana font-extrabold text-[var(--primary-color)] hover:scale-105 duration-500 ease-in-out;
+  @apply bg-[var(--light-color)] text-[1rem] px-15 rounded-lg py-1 font-quano font-extrabold text-[var(--primary-color)] hover:scale-105 duration-500 ease-in-out cursor-pointer
+  
+  max-[1410px]:px-10
+  max-[1265px]:px-8
+  max-[1060px]:px-6
+  max-[1003px]:text-[0.9rem]
+  max-[1003px]:px-5
+  max-[835px]:text-[0.8rem]
+  max-[392px]:px-2.5
+  max-[392px]:py-0.5
+  max-[690px]:px-3
+  max-[690px]:rounded-full;
 }
 
 .chapter1-div4 > div > fieldset {
-  @apply bg-[var(--light-color)] text-[var(--dark-color)] font-verdana p-5 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out;
+  @apply bg-[var(--light-color)] text-[var(--dark-color)] font-verdana p-3 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out
+  
+  max-[1300px]:text-[1rem]
+
+  max-[1003px]:text-[0.9rem]
+  max-[1003px]:px-12
+  max-[1003px]:pt-3
+
+  max-[835px]:text-[0.8rem]
+
+  max-[835px]:px-10
+  max-[835px]:pt-0
+  max-[835px]:pb-5
+
+  max-[595px]:mt-2
+
+  max-[595px]:text-[0.7rem]
+  max-[595px]:px-6
+  max-[595px]:indent-4
+
+  max-[475px]:text-[0.6rem]
+  max-[475px]:px-4
+  max-[475px]:pb-3;
 }
 
 .chapter1-div4 > div > fieldset > legend {
-  @apply indent-0 text-[4rem] bg-[var(--primary-color)] font-verdana font-bold px-10 text-[var(--light-color)] border-10 border-[var(--light-color)] py-3 rounded-full;
+  @apply indent-0 text-[4rem] bg-[var(--primary-color)] font-verdana font-bold px-10 text-[var(--light-color)] border-10 border-[var(--light-color)] py-3 rounded-full
+  
+  max-[1410px]:text-[3rem]
+  max-[1410px]:px-8
+  max-[1265px]:text-[2rem]
+  max-[1265px]:px-6
+  max-[1060px]:text-[1.5rem]
+  max-[1060px]:px-5.5
+  max-[1003px]:text-[1.2rem]
+  max-[1003px]:px-5
+
+  max-[835px]:text-[1rem]
+  max-[835px]:px-4.5
+
+  max-[595px]:text-[0.8rem]
+  max-[595px]:px-4
+  max-[595px]:py-2.5
+
+  max-[475px]:py-1
+  max-[475px]:px-2.5;
+}
+
+.fieldset_div {
+  @apply transition-all pt-0 px-20 py-15
+          
+  max-[822px]:px-10
+  max-[822px]:pb-10
+
+  max-[475px]:px-5
+  max-[475px]:pb-5
+  max-[400px]:px-4;
 }
 /* chapter 6.1 design */
