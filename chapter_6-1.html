@@ -234,16 +234,21 @@
         </div>
       </div>
 
-      <div class="chapter1-div4 hidden">
-        <h1>
+      <div class="chapter1-div4">
+        <h1 class="max-[690px]:hidden">
           Software Architecture: Patterns, Styles, and Design Considerations
         </h1>
-        <div class="flex justify-center gap-5 py-0">
-          <label for="div1" class="cursor-pointer">1</label>
-          <label for="div2" class="cursor-pointer">2</label>
-          <label for="div3" class="cursor-pointer">3</label>
-          <label for="div4" class="cursor-pointer">4</label>
-          <label for="div5" class="cursor-pointer">5</label>
+
+        <h1 class="min-[690px]:hidden">
+          Software Architecture<br />Patterns, Styles, and Design Considerations
+        </h1>
+
+        <div class="flex justify-center gap-5 py-0 max-[690px]:gap-3">
+          <label for="div1">1</label>
+          <label for="div2">2</label>
+          <label for="div3">3</label>
+          <label for="div4">4</label>
+          <label for="div5">5</label>
         </div>
 
         <input
@@ -278,11 +283,9 @@
           class="peer/div5 hidden"
         />
 
-        <div
-          class="hidden peer-checked/div1:block transition-all pt-0 px-20 py-15"
-        >
-          <fieldset class=" ">
-            <legend class="">1</legend>
+        <div class="hidden fieldset_div peer-checked/div1:block">
+          <fieldset>
+            <legend>1</legend>
             For embedded systems and systems designed for personal computers,
             there is usually only a single processor and you will not have to
             design a distributed architec ture for the system. However, most
@@ -294,17 +297,9 @@
           </fieldset>
         </div>
 
-        <div
-          class="hidden peer-checked/div2:block transition-all pt-0 px-20 py-15"
-        >
-          <fieldset
-            class="bg-light-color font-dark-color font-verdana p-5 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out"
-          >
-            <legend
-              class="indent-0 text-[4rem] bg-primary-color font-verdana font-bold px-10 font-light-color border-10 border-[var(--light-color)] py-3 rounded-full"
-            >
-              2
-            </legend>
+        <div class="hidden fieldset_div peer-checked/div2:block">
+          <fieldset>
+            <legend>2</legend>
             The architecture of a software system may be based on a particular
             architectural pattern or style. An architectural pattern is a
             description of a system organization (Garlan and Shaw, 1993), such
@@ -318,17 +313,9 @@
           </fieldset>
         </div>
 
-        <div
-          class="hidden peer-checked/div3:block transition-all pt-0 px-20 py-15"
-        >
-          <fieldset
-            class="bg-light-color font-dark-color font-verdana p-5 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out"
-          >
-            <legend
-              class="indent-0 text-[4rem] bg-primary-color font-verdana font-bold px-10 font-light-color border-10 border-[var(--light-color)] py-3 rounded-full"
-            >
-              3
-            </legend>
+        <div class="hidden fieldset_div peer-checked/div3:block">
+          <fieldset>
+            <legend>3</legend>
             Garlan and Shaw’s notion of an architectural style (style and
             pattern have come to mean the same thing) covers questions 4 to 6 in
             the previous list. You have to choose the most appropriate
@@ -343,17 +330,9 @@
           </fieldset>
         </div>
 
-        <div
-          class="hidden peer-checked/div4:block transition-all pt-0 px-20 py-15"
-        >
-          <fieldset
-            class="bg-light-color font-dark-color font-verdana p-5 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out"
-          >
-            <legend
-              class="indent-0 text-[4rem] bg-primary-color font-verdana font-bold px-10 font-light-color border-10 border-[var(--light-color)] py-3 rounded-full"
-            >
-              4
-            </legend>
+        <div class="hidden fieldset_div peer-checked/div4:block">
+          <fieldset>
+            <legend>4</legend>
             Obviously there is potential conflict between some of these
             architectures. For example, using large components improves
             performance and using small, fine-grain components improves
@@ -364,17 +343,9 @@
           </fieldset>
         </div>
 
-        <div
-          class="hidden peer-checked/div5:block transition-all pt-0 px-20 py-15"
-        >
-          <fieldset
-            class="bg-light-color font-dark-color font-verdana p-5 px-15 indent-8 pb-8 text-justify text-[1.2rem] rounded-2xl duration-300 ease-in-out"
-          >
-            <legend
-              class="indent-0 text-[4rem] bg-primary-color font-verdana font-bold px-10 font-light-color border-10 border-[var(--light-color)] py-3 rounded-full"
-            >
-              5
-            </legend>
+        <div class="hidden fieldset_div peer-checked/div5:block">
+          <fieldset>
+            <legend>5</legend>
             Evaluating an architectural design is difficult because the true
             test of an architec ture is how well the system meets its functional
             and non-functional requirements when it is in use. However, you can
