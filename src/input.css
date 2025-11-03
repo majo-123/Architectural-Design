@@ -643,7 +643,7 @@ body {
 }
 
 .chapter1-div4 > div > label {
-  @apply bg-[var(--light-color)] text-[1rem] px-15 rounded-lg py-1 font-quano font-extrabold text-[var(--primary-color)] hover:scale-105 duration-500 ease-in-out cursor-pointer
+  @apply bg-[var(--light-color)] text-[1rem] px-15 rounded-lg py-1 font-quano font-extrabold text-[var(--primary-color)] hover:scale-107 duration-500 ease-in-out cursor-pointer
   
   max-[1410px]:px-10
   max-[1265px]:px-8
@@ -654,7 +654,13 @@ body {
   max-[392px]:px-2.5
   max-[392px]:py-0.5
   max-[690px]:px-3
-  max-[690px]:rounded-full;
+  max-[690px]:rounded-full
+  
+  hover:text-[var(--light-color)]
+  hover:bg-[var(--primary-color)]
+  hover:border-[var(--light-color)]
+  border-1
+  ;
 }
 
 .chapter1-div4 > div > fieldset {
