@@ -11,12 +11,18 @@
     <header class="homepage-header">
       <div class="header-h1">
         <a href="homepage.html">
-          <img class="h-12" src="/src/assets/img/logo.png" alt="haha" />
+          <img
+            class="h-11 max-[585px]:h-9"
+            src="/src/assets/img/logo.png"
+            alt="haha"
+          />
         </a>
-        <a href="homepage.html"> <h1 class="pt-1.5">Chapter Sixth</h1> </a>
+        <a href="homepage.html">
+          <h1 class="pt-1.5 max-[730px]:hidden">Chapter 6</h1>
+        </a>
       </div>
 
-      <nav class="homepage-nav nav1">
+      <nav class="max-[1140px]:hidden">
         <button class="header-button">
           <a href="chapter_6-1.html">Architectural Design Decisions</a>
         </button>
@@ -31,7 +37,22 @@
         </button>
       </nav>
 
-      <nav class="homepage-nav nav2">
+      <nav class="min-[1140px]:hidden max-[585px]:hidden">
+        <button class="header-button">
+          <a href="chapter_6-1.html">Decisions</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">Views</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">Patterns</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">Application</a>
+        </button>
+      </nav>
+
+      <nav class="min-[585px]:hidden text-md font-quano">
         <button class="header-button">
           <a href="chapter_6-1.html">6.1</a>
         </button>
@@ -57,20 +78,20 @@
           engineering, as it identifies the main structural components in a
           system and the relationships between them. The output of the
           architectural design process is an architectural model that describes
-          how the system is organized as a set of commu nicating components.
+          how the system is organized as a set of communicating components.
         </p>
       </div>
 
       <div class="mainpage-div2">
         <h1
-          class="font-quano text-center border-b-2 tracking-wide text-[2.5rem] font-semibold font-primary-color"
+          class="font-quano text-center border-b-2 tracking-wide text-[2.5rem] font-semibold font-primary-color max-[823px]:text-[2rem] max-[738px]:text-[1.7rem] max-[590px]:text-[1.5rem]"
         >
           OBJECTIVES
         </h1>
 
         <ul>
           <div class="before:content-['1']">
-            <li>
+            <li class="font-verdana">
               Understand why the architectural design of software is important.
             </li>
           </div>
@@ -98,8 +119,8 @@
       </div>
 
       <div class="mainpage-div3">
-        <div class="flex items-center gap-7">
-          <span class="text-[5rem] font-primary-color">☍</span>
+        <div>
+          <span>☍</span>
 
           <p>
             In agile processes, it is generally accepted that an early stage of
@@ -108,8 +129,8 @@
           </p>
         </div>
 
-        <div class="flex items-center gap-7">
-          <span class="text-[4rem] font-primary-color">⧉</span>
+        <div>
+          <span>⧉</span>
 
           <p>
             Incremental development of architectures is not usually successful.
@@ -119,8 +140,8 @@
           </p>
         </div>
 
-        <div class="flex items-center gap-7">
-          <span class="text-[4rem] font-primary-color">★</span>
+        <div>
+          <span>★</span>
 
           <p>
             Architectural decomposition is usually necessary to structure and
@@ -130,8 +151,8 @@
           </p>
         </div>
 
-        <div class="flex items-center gap-7">
-          <span class="text-[4rem] font-primary-color">⛮</span>
+        <div>
+          <span>⛮</span>
 
           <p>
             The system then moves objects from the delivery conveyor to be
@@ -194,7 +215,9 @@
         <fieldset class="border-t-2 border-[var(--primary-color)]">
           <legend>Three Key Advantages</legend>
 
-          <div class="flex flex-col">
+          <div
+            class="flex flex-col gap-4 max-[1090px]:gap-3 max-[772px]:gap-2 max-[680px]:gap-1"
+          >
             <label class="cursor-pointer block">
               <input type="checkbox" class="peer hidden" />
 
@@ -210,7 +233,7 @@
               </div>
             </label>
 
-            <label class="cursor-pointer block mt-4">
+            <label class="cursor-pointer block">
               <input type="checkbox" class="peer hidden" />
 
               <div class="advantage-div">
@@ -225,7 +248,7 @@
               </div>
             </label>
 
-            <label class="cursor-pointer block mt-4">
+            <label class="cursor-pointer block">
               <input type="checkbox" class="peer hidden" />
 
               <div class="advantage-div">
@@ -344,8 +367,12 @@
     </main>
     <footer class="footer-container">
       <div class="footer-div1">
-        <div class="flex flex-col gap-1">
-          <img class="h-25 w-25" src="/src/assets/img/logo.png" alt=" " />
+        <div class="footer-container1">
+          <img
+            class="h-25 w-25 max-[1160px]:h-20 max-[1160px]:w-20 max-[1030px]:h-15 max-[1030px]:w-15 max-[810px]:h-10 max-[810px]:w-10 max-[540px]:h-8 max-[540px]:w-8 max-[425px]:h-5 max-[425px]:w-5"
+            src="/src/assets/img/logo.png"
+            alt=" "
+          />
           <h1>Architectural Design</h1>
         </div>
         <div>
@@ -363,7 +390,7 @@
           <p>delossantosmaricar@gmail.com</p>
         </div>
       </div>
-      <div class="flex justify-between px-20 pt-8 items-center">
+      <div class="footer-div2">
         <h1>@HARRYSORT - BS INFORMATION TECHNOLOGY</h1>
         <div class="flex items-center gap-4">
           <div>
