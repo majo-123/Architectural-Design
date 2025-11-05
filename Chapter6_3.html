@@ -4,113 +4,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Architectural Design</title>
   <link href="./src/output.css" rel="stylesheet" />
+    <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="fixed top-30 right-5 z-50">
+    <select 
+        class="bg-blue-100 text-shadow-gray-200 border border-blue-100 rounded-xl shadow-lg p-2 transition-all duration-300 hover:bg-blue-100 focus:ring-1 focus:ring-blue-50 cursor-pointer font-verdana font-extralight text-sm "
+        onchange="location = this.value;">
+      <option value="#">Select Figure</option>
+      <option value="#fig6-2">Figure 6.2</option>
+      <option value="#fig6-3">Figure 6.3</option>
+      <option value="#fig6-4">Figure 6.4</option>
+      <option value="#fig6-5">Figure 6.5</option>
+      <option value="#fig6-6">Figure 6.6</option>
+      <option value="#fig6-7">Figure 6.7</option>
+      <option value="#fig6-8">Figure 6.8</option>
+      <option value="#fig6-9">Figure 6.9</option>
+      <option value="#fig6-10">Figure 6.10</option>
+      <option value="#fig6-11">Figure 6.11</option>
+      <option value="#fig6-12">Figure 6.12</option>
+      <option value="#fig6-13">Figure 6.13</option>
+    </select>
+  </div>
 
-  <header>
-    <h1 class="font-rogria font-bold text-[6rem] tracking-wider">
-      <a href="homepage.html">CHAPTER 6</a>
-    </h1>
-    <h2 class="font-verdana text-[1.5rem] -mt-8 tracking-wider">
-      ARCHITECTURAL DESIGN
-    </h2>
-  </header>
+  <header class="homepage-header">
+      <div class="header-h1">
+        <a href="index.html">
+          <img
+            class="h-11 max-[585px]:h-9"
+            src="/src/assets/img/logo.png"
+            alt="haha"
+          />
+        </a>
+        <a href="index.html">
+          <h1 class="pt-1.5 max-[730px]:hidden">Chapter 6</h1>
+        </a>
+      </div>
 
-  <nav class="nav1">
-    <button class="header-button">
-      <a href="chapter_6-1.html">Chapter 6.1</a>
-    </button>
-    <button class="header-button">
-      <a href="6.2.html">Chapter 6.2</a>
-    </button>
-    <button class="header-button">
-      <a href="Chapter6_3.html">Chapter 6.3</a>
-    </button>
-    <button class="header-button">
-      <a href="Chapter6.4.html">Chapter 6.4</a>
-    </button>
-  </nav>
+      <nav class="max-[1140px]:hidden">
+        <button class="header-button">
+          <a href="chapter_6-1.html">Architectural Design Decisions</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">Architectural Views</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">Architectural Patterns</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">Application Architectures</a>
+        </button>
+      </nav>
 
-  <nav class="nav2">
-    <button class="header-button">
-      <a href="chapter_6-1.html">6.1</a>
-    </button>
-    <button class="header-button">
-      <a href="6.2.html">6.2</a>
-    </button>
-    <button class="header-button">
-      <a href="Chapter6_3.html">6.3</a>
-    </button>
-    <button class="header-button">
-      <a href="Chapter6.4.html">6.4</a>
-    </button>
-  </nav>
+      <nav class="min-[1140px]:hidden max-[585px]:hidden">
+        <button class="header-button">
+          <a href="chapter_6-1.html">Decisions</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">Views</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">Patterns</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">Application</a>
+        </button>
+      </nav>
 
-  <main>
-    <h1> 6.3 Architectural patterns</h1>
-    <p> The idea of patterns as a way of presenting, sharing, and reusing knowledge about
-      software systems is now widely used. The trigger for this was the publication of a
-      book on object-oriented design patterns (Gamma et al., 1995), which prompted the
-      development of other types of pattern, such as patterns for organizational design
-      (Coplien and Harrison, 2004), usability patterns (Usability Group, 1998), interaction
-      (Martin and Sommerville, 2004), configuration management (Berczuk and Appleton, 2002), and so on.<br></br>
+      <nav class="min-[585px]:hidden text-md font-quano">
+        <button class="header-button">
+          <a href="chapter_6-1.html">6.1</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">6.2</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">6.3</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">6.4</a>
+        </button>
+      </nav>
+    </header>
+<main>
+    <div  class="text-center py-20 p-6 rounded-lg animate-fade-in-up hidden-section fade-in px-8 bg-blue-50 my-5">
+    <h2 class=" sm:text-3xl md:text-4xl lg:text-5xl xl:6xl font-semibold mb-4 transition-transform duration-500 hover:scale-110 font-verdana py-10 " > Architectural Patterns</h2>
+    <p class=" text-justify max-w-5xl mx-auto text-gray-700 leading-relaxed animate-fade-in font-verdana indent-8 sm:text-sm md:text-lg lg:text-xl:text-xl"> The idea of patterns as a way of presenting, sharing, and reusing knowledge about software systems is now widely used. The trigger for this was the publication of a book on object-oriented design patterns (Gamma et al., 1995), which prompted the development of other types of pattern, such as patterns for organizational design (Coplien and Harrison, 2004), usability patterns (Usability Group, 1998), interaction(Martin and Sommerville, 2004), configuration management (Berczuk and Appleton, 2002), and so on.</p>
+    </div>
 
-    <p> <strong>Figure 6.3 </strong> The organization of the MVC</p>
-
-    <img src="src/img6.3.jpeg " alt=" Figure 6.3 The organization of the MVC ">
-    <br></br>
-    Architectural patterns were proposed in the 1990s under
-    the name ‘architectural styles’ (Shaw and Garlan, 1996), with a five-volume series of
-    handbooks on pattern-oriented software architecture published between 1996 and 2007 (Buschmann et al., 1996;
-    Buschmann et al., 2007a; Buschmann et al., 2007b; Kircher and Jain, 2004; Schmidt et al., 2000).<br></br>
-    In this section, I introduce architectural patterns and briefly describe a selection
-    of architectural patterns that are commonly used in different types of systems. For
-    more information about patterns and their use, you should refer to published pattern
-    handbooks. You can think of an architectural pattern as a stylized, abstract description of good
-    practice, which has been tried and tested in different systems and environments. So,
-    an architectural pattern should describe a system organization that has been success
+       <div  class="text-center py-20 p-6 rounded-lg animate-fade-in-up my-5 bg-blue-50 ">
+    <p id="fig6-2" class=" indent-8 text-justify max-w-5xl mx-auto text-gray-700  leading-relaxed animate-fade-in font-verdana sm:text-sm md:text-lg lg:text-xl:text-xl">  In this section, I introduce architectural patterns and briefly describe a selection
+     of architectural patterns that are commonly used in different types of systems. For
+     more information about patterns and their use, you should refer to published pattern
+     handbooks. You can think of an architectural pattern as a stylized, abstract description of good
+     practice, which has been tried and tested in different systems and environments. So,
+     an architectural pattern should describe a system organization that has been success
     ful in previous systems. It should include information of when it is and is not appro
-    priate to use that pattern, and the pattern’s strengths and weaknesses.<br></br>
-    For example, Figure 6.2 describes the well-known Model-View-Controller pattern.
-    This pattern is the basis of interaction management in many web-based systems. The
-    stylized pattern description includes the pattern name, a brief description (with an
-    associated graphical model), and an example of the type of system where the pattern
-    is used (again, perhaps with a graphical model). You should also include information
-    about when the pattern should be used and its advantages and disadvantages.
-    Graphical models of the architecture associated with the MVC pattern are shown in
-    Figures 6.3 and 6.4. These present the architecture from different views—Figure 6.3
-    is a conceptual view and Figure 6.4 shows a possible run-time architecture when this
-    pattern is used for interaction management in a web-based system.
-    <br></br>
-    In a short section of a general chapter, it is impossible to describe all of the
-    generic patterns that can be used in software development. Rather, I present some
-    selected examples of patterns that are widely used and which capture good architec
-    tural design principles. I have included some further examples of generic architec
-    tural patterns on the book’s web pages.
+    priate to use that pattern, and the pattern’s strengths and weaknesses.</p>
+    </div>
 
-    </p>
-    <p> <strong>Figure 6.4 </strong> Web application architecture using the MVC pattern</p>
-    <img src="src/img 6.4.jpeg " alt=" Figure 6.4 Web application architecture using the MVC pattern">
+<p ></p>
 
-    <h2> 6.3.1 Layered architecture</h2>
-    <p> The notions of separation and independence are fundamental to architectural design
-      because they allow changes to be localized. The MVC pattern, shown in Figure 6.2,
-      separates elements of a system, allowing them to change independently. For example, adding a new view or changing
-      an existing view can be done without any
-      changes to the underlying data in the model. The layered architecture pattern is
-      another way of achieving separation and independence. This pattern is shown in
-      Figure 6.5. Here, the system functionality is organized into separate layers, and each
-      layer only relies on the facilities and services offered by the layer immediately
-      beneath it. <br></br></p>
+<div class=" grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+          <div class="flex items-start gap-4">
+            <div class="w-50 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-300 text-white flex items-center justify-center font-bold transform group-hover:scale-110 transition">6.2</div>
+            <div class=" text-left">
+              <h4 class="text-lg font-semibold">The MVC pattern</h4>
+              <p class="text-normal text-slate-600 mt-1 text-justify p-10 my-10 font-verdana indent-8">For example, Figure 6.2 describes the      well-known Model-View-Controller pattern.
+                    This pattern is the basis of interaction management in many web-based systems. The
+                    stylized pattern description includes the pattern name, a brief description (with an
+                    associated graphical model), and an example of the type of system where the pattern
+                    is used (again, perhaps with a graphical model). 
 
-    <p> <strong>Figure 6.5 </strong> The layered architecture pattern</p>
-    <img src="src/img 6.5.jpeg" alt="Figure 6.5 The layered architecture pattern">
+                   </p>
+                 </div>  
+               </div>
+           </div>      
+       <div class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+               <div class="flex items-start gap-4">
+                 <div class="w-9 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-300 text-white flex items-center justify-center font-bold transform group-hover:scale-110 transition" >6.2</div>
+                 <div class=" text-left">
+                   <h4 class="text-lg font-semibold">Client–Server Model Advantage</h4>
+                   
+                    <p ><strong  class="scroll-mt-28 font-verdana">Figure 6.2: </strong> The model view-controller (MVC) pattern </p>
+                   <img src="src/assets/img/Annotation 2025-09-03 114743.png\" class="mx-auto" alt="">
+                 </div>  
+               </div>
+         </div>
+  </div>
+        <p id="fig6-4"></p>
+       <p id="fig6-3"></p>
 
+ <section class="py-20 px-6 max-w-6xl mx-auto">
+    <h3  class=" text-center text-3xl sm: text-xl md: text-2xl md:text-3xl font-primary-color font-verdana my-10 font-bold text-transparent bg-clip-text"> Architecture from different views</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl shadow-xl p-6 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-50">
+                 <h1> <p class="text-center my-5"><strong>Figure 6.3</strong> The organization of the MVC</p></h1>        
+                 <img src="src/assets/img/img6.3.jpeg"
+                      alt="MVC" class="rounded-xl mb-5 opacity-90 hover:opacity-100 transition duration-500">
+                 <h4 class="text-xl font-semibold mb-2 text-blue-700 text-center">Figure 6.3</h4>
+                 <p class="text-gray-600 mb-4"> This present the architecture from different views—Figure 6.3 is a conceptual view. </p>             
+          </div>
+         <!-- Card 2 -->
+         <div class="bg-white rounded-2xl shadow-xl p-6 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-50">
+                <h1 > <p class="text-center my-5"><strong>Figure 6.4</strong>  Web application architecture using the MVC pattern</p></h1>
+                <img src="src/assets/img/img 6.4.jpeg"
+                     alt="Layered Architecture" class="rounded-xl mb-5 opacity-90 hover:opacity-100 transition duration-500">
+                <h4 class="text-xl font-semibold mb-2 text-blue-700 text-center" > Figure 6.4</h4>
+                 <p id="fig6-5" class="text-gray-600 mb-4">This shows a possible run-time architecture when this pattern is used for interaction management in a web-based system.</p>
+               
+          </div>
+      </div>
+  </section>
 
-    <p> This layered approach supports the incremental development of systems. As a
+  <section class="hidden-section fade-in py-10 px-8 bg-blue-50 my-5">
+    <div class="max-w-6xl mx-auto text-center ">
+      <h3 class =" text-3xl sm: text-xl md: text-2xl md:text-3xl text-center text-4xl font-bold font-primary-color font-verdana my-10">6.3.1 Layered architecture</h3>
+      <p class="text-gray-700 leading-relaxed font-verdana text-justify indent-8">
+         The notions of separation and independence are fundamental to architectural design
+         because they allow changes to be localized. The MVC pattern, shown in Figure 6.2,
+         separates elements of a system, allowing them to change independently. For example, adding a new view or changing
+         an existing view can be done without any changes to the underlying data in the model. The layered architecture pattern is
+         another way of achieving separation and independence. This pattern is shown in
+         Figure 6.5. Here, the system functionality is organized into separate layers, and each
+         layer only relies on the facilities and services offered by the layer immediately
+         beneath it.
+
+      </p>
+         <label class="flex flex-col cursor-pointer">
+          <input type="checkbox" class="peer hidden" />
+
+          <h1 class="font-verdana my-10"><strong>➤  View Figure 6.5 The layered architecture pattern </strong></h1>
+
+          <div class="img-div">
+            <img src="src/assets/img/img 6.5.jpeg" alt="Figure 6.5" />
+          </div>
+        </label>  
+       
+    </div>
+  </section>
+ 
+  <section class="hidden-section fade-in py-10 px-8 bg-blue-50 my-5">
+    <div class="max-w-6xl mx-auto text-center my-10">
+     
+      <p class="text-gray-700 leading-relaxed font-verdana text-justify indent-8">
+         This layered approach supports the incremental development of systems. As a
       layer is developed, some of the services provided by that layer may be made avail
       able to users. The architecture is also changeable and portable. So long as its inter
       face is unchanged, a layer can be replaced by another, equivalent layer. Furthermore,
@@ -118,201 +205,415 @@
       layer is affected. As layered systems localize machine dependencies in inner layers,
       this makes it easier to provide multi-platform implementations of an application system. Only the inner,
       machine-dependent layers need be re-implemented to take
-      account of the facilities of a different operating system or database.</p> <br></br>
+      account of the facilities of a different operating system or database.
 
-    <p> <strong>Figure 6.6 </strong> A generic layered architecture</p>
-    <img src="src/img 6.6.jpeg" alt=" Figure 6.6 A generic layered architecture">
+      </p>    
+    </div>
+  </section>
 
-    <p>
-      Figure 6.6 is an example of a layered architecture with four layers. The
-      lowest layer includes system support software—typically database and
-      operating system support. The next layer is the application layer that
-      includes the components concerned with the application functionality and
-      utility components that are used by other application components. The
-      third layer is concerned with user interface management and providing
-      user authentication and authorization, with the top layer providing user
-      interface facilities. Of course, the number of layers is arbitrary. Any
-      of the layers in Figure 6.6 could be split into two or more layers.
+  <p id="fig6-6"></p>
+  <p id="fig6-7"></p>
+ <section class="py-20 px-6 max-w-6xl mx-auto">
+    <h3  class="text-3xl sm: text-xl md: text-2xl md:text-3xl  text-center text-3xl font-primary-color font-verdana my-10 font-bold text-transparent bg-clip-text">Layered Architecture</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl shadow-xl p-6 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-50">
+        <h1 > <p class="text-center my-5"><strong>Figure 6.6</strong> A generic layered architecture</p></h1>
 
-      <br></br>
+        <img src="src/assets/img/img 6.6.jpeg"
+             alt="Figure 6.6 A generic layered architecture" class="rounded-xl mb-5 opacity-90 hover:opacity-100 transition duration-500">   
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl p-6 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-50">
+        <h1 id="fig6-7"> <p class="text-center my-5"><strong>Figure 6.7</strong>  The architecture of the LIBSYS system</p></h1>
+        <img src="src/assets/img/img 6.7.jpeg"
+             alt="LFigure 6.7 The architecture of the LIBSYS system" class="rounded-xl mb-5 opacity-90 hover:opacity-100 transition duration-500">
+    
+      </div>
+    </div>
+  </section>
+  <section  class="hidden-section fade-in py-20 px-6 bg-blue-50 my-5">
+    <div class="max-w-6xl mx-auto text-center py-5">
+      <h3 class="text-3xl font-bold text-blue-700 mb-4 font-primary-color sm: text-2xl md: text-2xl md:text-3xl " >Generic layered architecture</h3>
+      <p class="text-gray-700 leading-relaxed font-verdana text-justify">
+        Figure 6.6 is an example of a layered architecture with four layers. The lowest
+ layer includes system support software—typically database and operating system
+ support. The next layer is the application layer that includes the components
+ concerned with the application functionality and utility components that are used
+ by other application components. The third layer is concerned with user interface 
+ management and providing user authentication and authorization, with the top layer
+ providing user interface facilities. Of course, the number of layers is arbitrary. Any
+ of the layers in Figure 6.6 could be split into two or more layers.
 
-    <p> <strong>Figure 6.7 </strong> The architecture of the LIBSYS system</p>
-    <img src="src/img 6.7.jpeg" alt=" Figure 6.7 The architecture of the LIBSYS system">
-    <br></br>
-    Figure 6.7 is an example of how this layered architecture pattern can be applied to a
-    library system called LIBSYS, which allows controlled electronic access to copyright
-    material from a group of university libraries. This has a five-layer architecture, with the
-    bottom layer being the individual databases in each library.
-    You can see another example of the layered architecture pattern in Figure 6.17
-    (found in Section 6.4). This shows the organization of the system for mental health
-    care (MHC-PMS) that I have discussed in earlier chapter</p><br></br>
+      </p>
+    </div>
+  </section>
 
-    <h2> 6.3.2 Repository architecture</h2>
+  <section  class="hidden-section fade-in py-20 px-6 bg-blue-50">
+    <div class="max-w-6xl mx-auto text-center py-5">
+      <h3 class="text-3xl font-bold text-blue-700 mb-4 font-primary-color">Architecture of the LIBSYS system</h3>
+      <p class="text-gray-700 leading-relaxed font-verdana text-justify">
+     Figure 6.7 is an example of how this layered architecture pattern can be applied to a
+ library system called LIBSYS, which allows controlled electronic access to copyright
+ material from a group of university libraries. This has a five-layer architecture, with the
+ bottom layer being the individual databases in each library.
+ You can see another example of the layered architecture pattern in Figure 6.17
+ (found in Section 6.4). This shows the organization of the system for mental health
+care (MHC-PMS) that I have discussed in earlier chapters.
+      </p>
+    </div>
+  </section>
 
-    <p> The layered architecture and MVC patterns are examples of patterns where the view presented is the conceptual
-      organization of a system. My next example, the Repository pattern (Figure 6.8), describes how a set of interacting
-      components can
-      share data. The layered architecture and MVC patterns are examples of patterns where the view
-      presented is the conceptual organization of a system. My next example, the Repository pattern (Figure 6.8),
-      describes how a set of interacting components can share data.
+  <section  class=" hidden-section fade-in py-10 px-8 bg-blue-50 my-10 rounded-2xl">
+    <div class="max-w-5xl mx-auto text-center py-2">
+      <p id="fig6-9"></p>
+      <h3 id="fig6-8"class="text-4xl font-bold font-primary-color mb-2 font-verdana text-3xl sm: text-xl md: text-3xl md:text-3xl text-center text-4xl">6.3.2 Repository architecture</h3>
+      <p class="text-gray-700 leading-relaxed py-5">
+          The layered architecture and MVC patterns are examples of patterns where the view
+ presented is the conceptual organization of a system. My next example, the
+ Repository pattern (Figure 6.8), describes how a set of interacting components can
+ share data.
 
-      <br></br>
-    <p> <strong>Figure 6.8 </strong> Figure 6.8 The repository pattern</p>
-    <img src="src/img 6.8.jpeg" alt="Figure 6.8 The repository pattern">
-    The majority of systems that use large amounts of data are organized around a
-    shared database or repository. This model is therefore suited to applications in which data is generated by one
-    component and used by another. Examples of this type of
-    system include command and control systems, management information systems,
-    CAD systems, and interactive development environments for software. </p>
+      </p>
+       <section class="py-20 px-6 max-w-6xl mx-auto">
+    
+    <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl shadow-xl p-6 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-50">
+        <h1 > <p class="text-center my-5"><strong>Figure 6.8</strong> The repository pattern</p></h1>
+        <img src="src/assets/img/img 6.8.jpeg"
+             alt="Figure 6.8 The repository pattern" class="rounded-xl mb-5 opacity-90 hover:opacity-100 transition duration-500">
+         <h4 class="text-xl font-semibold mb-2 text-blue-700"> Generic layered architecture</h4>
+           <p class="text-gray-600 mb-4 text-justify"> These present the architecture from different views—Figure 6.3 is a conceptual view. The majority of systems that use large amounts of data are organized around a
+    shared database or repository. This model is therefore suited to applications in which data is generated by one component and used by another. </p>
+  </div>
+      <div class="bg-white rounded-2xl shadow-xl p-6 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:bg-blue-50">
+        <h1 > <p class="text-center my-5"><strong>Figure 6.9</strong> A repository architecture for an IDE</p></h1>
+        <img src="src/assets/img/img 6.9.jpeg"
+             alt="A repository architecture for an IDE class="rounded-xl mb-5 opacity-90 hover:opacity-100 transition duration-500">
+          <h4 class="text-xl font-semibold mb-2 text-blue-700"> Repository architecture for an IDE</h4>
+        <p class="text-gray-600 mb-4 text-justify"> Figure 6.9 is an illustration of a situation in which a repository might be used.
+      This diagram shows an IDE that includes different tools to support model-driven
+      development. The repository in this case might be a version-controlled environment
+      (as discussed in Chapter 25) that keeps track of changes to software and allows roll
+       back to earlier versions.  </p>    
+      </div>
+    </div>
+  </section>
+  <section  class="hidden-section fade-in bg-blue-50">
+    <div class="max-w-6xl mx-auto text-center ">
+      <p   id="fig6-10" class=" indent-8 leading-relaxed font-verdana text-justify">
+Organizing tools around a repository is an efficient way to share large amounts of
+      has been derived for AI systems, uses a ‘blackboard’ model that triggers com
+      ponents when particular data become available. This is appropriate when the form of
+      the repository data is less well structured. Decisions about which tool to activate can
+      only be made when the data has been analyzed. This model is introduced by Nii
+      (1986). Bosch (2000) includes a good discussion of how this style relates to system
+      quality attributes.
+      </p>
+    </div>
+  </section>
+   </div>
+      </div>
+ </section>
+  <section  class=" hidden-section fade-in py-10 px-8 bg-blue-50 my-10 rounded-5xl">
+    <div class="max-w-5xl mx-auto text-center py-2">
+      <h3 class="text-3xl font-bold font-primary-color mb-2 font-verdana  sm: text-xl md: text-3xl md:text-3xl text-center text-4xl">6.3.3 Client–server architecture</h3>
+      <p class="text-gray-700 leading-relaxed py-9">
+         The repository pattern is concerned with the static structure of a system and does not
+         show its run-time organization. My next example illustrates a very commonly used
+         run-time organization for distributed systems. The Client–server pattern is described
+         in Figure 6.10  
+      </p>
+<section class="py-5 px-8 bg-blue-50 fade-in">
+  <div class="max-w-5xl mx-auto text-center">
+    <details class=" shadow-md p-2 mb-2 group open:shadow-xl transition-all duration-300">
+      <summary class="cursor-pointer text-xl font-bold font-primary-color select-none group-hover:text-blue-800 transition">
+        View Figure 6.10
+      </summary>
+         <p> <strong class=" text-gray-700 mt-4 leading-relaxed scroll-mt-28">The client–server pattern </strong> </p>
+    <img src="src/assets/img/img 6.10.jpeg" class="mx-auto" alt=" Figure 6.10 The client–server pattern">
+      </p>
+    </details>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <section  class="mb-12">
+      <h3 class="text-2xl font-bold mb-6 font-verdana ">Major components</h3>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+          <div class="flex items-start gap-4">
+            <div class="w-40 h-10 rounded-lg bg-gradient-to-tr from-blue-700 to-blue-400 text-white flex items-center justify-center font-bold transform group-hover:rotate-6 transition">1</div>
+            <div>
+              <h4 class="text-lg font-semibold">Servers</h4>
+              <p class="text-sm text-slate-500 mt-1 text-justify">A set of servers that offer services to other components. Examples of servers
+ include print servers that offer printing services, file servers that offer file man
+agement services, and a compile server, which offers programming language
+ compilation services.</p>
+            </div>
+          </div>
+        </article>
+        <article class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+          <div class="flex items-start gap-4">
+            <div class="w-30 h-10 rounded-lg bg-gradient-to-tr from-blue-800 to-blue-500 text-white flex items-center justify-center font-bold transform group-hover:-rotate-6 transition">   2   </div>
+            <div>
+              <h4 class="text-lg font-semibold">Client</h4>
+              <p class="text-sm text-slate-500 mt-1 text-justify">A set of clients that call on the services offered by servers. There will normally
+ be several instances of a client program executing concurrently on different
+ computers.</p>
+            </div>
+          </div>
+        </article>
+        <article class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+          <div class="flex items-start gap-4">
+            <div class="w-25 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-300 text-white flex items-center justify-center font-bold transform group-hover:scale-110 transition">3</div>
+            <div>
+              <h4 class="text-lg font-semibold">Network</h4>
+              <p class="text-sm text-slate-500 mt-1 text-justify">A network that allows the clients to access these services. Most client–server
+                 systems are implemented as distributed systems, connected using Internet
+                 protocols.</p>
+               </div>
+          </div>
+        </article>
+      </div>
+    </section>
+ <article class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+          <div class="flex items-start gap-4">
+            <div class="w-20 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-300 text-white flex items-center justify-center font-bold transform group-hover:scale-110 transition">4</div>
+            <div>
+              <h4 class="text-lg font-semibold">Characteristics</h4>
+              <p class=" text-justify text-sm text-slate-500 mt-1">Client–server architectures are usually thought of as distributed systems architec
+      tures but the logical model of independent services running on separate servers can
+      be implemented on a single computer. Again, an important benefit is separation and
+      independence. Services and servers can be changed without affecting other parts of
+      the system.</p>
+      <p id="fig6-11" class=" text-justify text-sm text-slate-500 mt-1"> Clients may have to know the names of the available servers and the   services that they provide. However, servers do not need to know the identity of clients or how
+       many clients are accessing their services. Clients access the services provided by a
+       server through remote procedure calls using a request-reply protocol such as the http protocol used in the WWW. Essentially, a client makes a request to a server and
+       waits until it receives a reply.</p>
+        </article>
+  <section  class="py-10 my-10 bg-gradient-to-t from-blue-100 to-white  rounded-2xl">
+    <h2 class="text-3xl text-center font-bold mb-10 animate-pulse my-10 font-primary-color">Figure 6.11 Client–server model</h2>
+  <img src ="src/assets/img/img 6.11.jpeg" class="mx-auto pb-10"
+      alt="Figure 6.11 A client— server architecture for a film library">
+      <p class="text justify"></p>
+    <details class="  place-items-center ">
+          <summary class=" flex items-center justify-between cursor-pointer list-none">
+            <div class=" flex items-center">
+              <div class=" text-center bg-blue-100 rounded-lg">
+                <div class="font-medium text-center ">View description ▾</div>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-4 grid sm:grid-cols-1 gap-3">
+            <a href="#reader" class=" text-justify bg-blue-50 p-3 rounded-lg border border-slate-100 hover:bg-blue-200 transition p-6"> Figure 6.11 is an example of a system that is based on the client–server model. This
+             is a multi-user, web-based system for providing a film and photograph library. In this
+             system, several servers manage and display the different types of media. Video frames
+             need to be transmitted quickly and in synchrony but at relatively low resolution. They
+             may be compressed in a store, so the video server can handle video compression and
+             decompression in different formats. Still pictures, however, must be maintained at a
+             high resolution, so it is appropriate to maintain them on a separate server.</a>
+          </div>
+        </details>
+         </div>
+<section> 
+  <div class= "flex flex-wrap justify-center gap-5 px-2"></div>
+  <div>
+     <h3 class="text-2xl font-bold mb-6 font-verdana text-center">Client–Server Architecture</h3></div>
+<div>
+<div>
+    <div class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+          <div class="flex items-start gap-4">
+            <div class="w-25 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-300 text-white flex items-center justify-center font-bold transform group-hover:scale-110 transition">1</div>
+            <div class=" text-left">
+              <h4 class="text-lg font-semibold">Catalog System</h4>
+              <p class="text-sm text-slate-500 mt-1 text-justify">The catalog system handles various types of queries. It connects to web information and e-commerce services for film, video, and photographs.</p>
+            </div>  
+          </div>
+        </div>
+
+<div>
+
+<div>
+    <div class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+          <div class="flex items-start gap-4">
+            <div class="w-24 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-300 text-white flex items-center justify-center font-bold transform group-hover:scale-110 transition">2</div>
+            <div class="text-left">
+              <h4 class="text-lg font-semibold">Client Program</h4>
+              <p class="text-sm text-slate-500 mt-1 text-justify">The client program serves as a web-based interface. It allows users to access and interact with the system’s services easily.
+
+</p>
+            </div>  
+          </div>
 
 
-    <p> <strong>Figure 6.9 </strong> A repository architecture for an IDE</p>
+</div>
 
-    <img src="src/img 6.9.jpeg" alt="A repository architecture for an IDE">
-    <br></br>
-    Figure 6.9 is an illustration of a situation in which a repository might be used.
-    This diagram shows an IDE that includes different tools to support model-driven
-    development. The repository in this case might be a version-controlled environment
-    (as discussed in Chapter 25) that keeps track of changes to software and allows roll
-    back to earlier versions.
-    <br></br>
-    Organizing tools around a repository is an efficient way to share large amounts of
-    has been derived for AI systems, uses a ‘blackboard’ model that triggers com
-    ponents when particular data become available. This is appropriate when the form of
-    the repository data is less well structured. Decisions about which tool to activate can
-    only be made when the data has been analyzed. This model is introduced by Nii
-    (1986). Bosch (2000) includes a good discussion of how this style relates to system
-    quality attributes.</p>
+<div>
+    <div class="group bg-white rounded-2xl p-6 border border-slate-100 shadow hover:shadow-xl transition-transform duration-500 transform hover:-translate-y-3">
+          <div class="flex items-start gap-4">
+            <div class="w-25 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-300 text-white flex items-center justify-center font-bold transform group-hover:scale-110 transition">3</div>
+            <div class=" text-left">
+              <h4 class="text-lg font-semibold">Client–Server Model Advantage</h4>
+              <p class="text-sm text-slate-500 mt-1 text-justify">The client–server model provides a distributed architecture. This enables scalability, easy integration, and transparent upgrades of servers
+              protocols.
+              <p id="fig6-12"></p>
+               <p id="fig6-13"></p>
+            </p>
+            </div>  
+          </div>
+        </div>
+</section>
+  <section  class=" hidden-section fade-in py-10 px-8 bg-blue-50 my-10 rounded-2xl">
+    <div class="max-w-5xl mx-auto text-center py-2">
+      <h3 class="text-3xl font-bold font-primary-color mb-2">6.3.4 Pipe and filter architecture</h3>
+  
+    <section class="mb-12">
+      <section  class=" hidden-section fade-in py-10 px-8 bg-blue-50 my-10 rounded-2xl">
+    <div class="max-w-5xl mx-auto text-center py-2">
+      <div class="space-y-3">
+        <details class="group p-4 rounded-xl border border-slate-100 bg-white shadow transition">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-100 flex items-center justify-center font-semibold">1</div>
+              <div>
+                <div class="font-medium">Definition</div>
+              
+              </div>
+            </div>
+            <div class="text-slate-400 group-open:rotate-180 transition-transform">▾</div>
+          </summary>
 
-    <h2>6.3.3 Client–server architecture</h2>
-    <p>
-      The repository pattern is concerned with the static structure of a
-      system and does not show its run-time organization. My next example
-      illustrates a very commonly used run-time organization for distributed
-      systems. The Client–server pattern is described in Figure 6.10.
-    </p>
+          <div class="mt-4 grid sm:grid-cols-2 gap-3  gap-9">
+            <a href="#reader" class=" text-justify bg-blue-50 p-3 rounded-lg border border-slate-100 hover:bg-blue-200 transition">This is a
+             model of the run-time organization of a system where functional transformations
+             process their inputs and produce outputs. Data flows from one to another and is trans
+            formed as it moves through the sequence. Each processing step is implemented as a
+             transform. Input data flows through these transforms until converted to output. The
+             transformations may execute sequentially or in parallel. The data can be processed by
+             each transform item by item or in a single batch.</a>
 
-    <p> <strong>Figure 6.10 </strong> Figure 6.10 The client–server pattern</p>
-    <img src="src/img 6.10.jpeg" alt=" Figure 6.10 The client–server pattern">
-    <p> A system that follows the client–server pattern is organized as a set of services
-      and associated servers, and clients that access and use the services. The major com
-      ponents of this model are:
-      <br></br>
-    <ol>
-      <li> A set of servers that offer services to other components. Examples of servers
-        include print servers that offer printing services, file servers that offer file man
-        agement services, and a compile server, which offers programming language
-        compilation services.
-      <li> A set of clients that call on the services offered by servers. There will normally
-        be several instances of a client program executing concurrently on different
-        computers.</li>
-      <li>A network that allows the clients to access these services. Most client–server
-        systems are implemented as distributed systems, connected using Internet
-        protocols.</li>
-    </ol>
-    Client–server architectures are usually thought of as distributed systems architec
-    tures but the logical model of independent services running on separate servers can
-    be implemented on a single computer. Again, an important benefit is separation and
-    independence. Services and servers can be changed without affecting other parts of
-    the system. <br></br>
-    Clients may have to know the names of the available servers and the services that
-    they provide. However, servers do not need to know the identity of clients or how
-    many clients are accessing their services. Clients access the services provided by a
-    server through remote procedure calls using a request-reply protocol such as the http protocol used in the WWW. </p>
+           <a href="#reader" class="text-justify bg-blue-50 p-3 rounded-lg border border-slate-100 hover:bg-blue-200 transition">The name <strong> ‘pipe and filter’</strong> comes from the original Unix system where it was pos
+                   sible to link processes using ‘pipes’. These passed a text stream from one process to
+            another. Systems that conform to this model can be implemented by combining Unix
+            commands, using pipes and the control facilities of the Unix shell. The term ‘filter’
+            is used because a transformation ‘filters out’ the data it can process from its input
+            data stream..</a>
+  
+          </div>
+        </details>
 
+        <details class="group p-4 rounded-xl border border-slate-100 bg-white shadow transition">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-100 flex items-center justify-center font-semibold">2</div>
+              <div>
+                <div class="font-medium">Variants and Applications</div>
+              </div>
+            </div>
+            <div class="text-slate-400 group-open:rotate-180 transition-transform">▾</div>
+          </summary>
 
-    <p> <strong>Figure 6.11 </strong> A client— server architecture for a film library</p>
-    <img src="src/img 6.11.jpeg" alt="Figure 6.11 A client— server architecture for a film library">
-    <p> Essentially, a client makes a request to a server and
-      waits until it receives a reply.
-      Figure 6.11 is an example of a system that is based on the client–server model. This
-      is a multi-user, web-based system for providing a film and photograph library. In this
-      system, several servers manage and display the different types of media. Video frames
-      need to be transmitted quickly and in synchrony but at relatively low resolution. They
-      may be compressed in a store, so the video server can handle video compression and
-      decompression in different formats. Still pictures, however, must be maintained at a
-      high resolution, so it is appropriate to maintain them on a separate server.
-      <br></br>
-      The catalog must be able to deal with a variety of queries and provide links into
-      the web information system that includes data about the film and video clips, and an
-      e-commerce system that supports the sale of photographs, film, and video clips.
-    </p>
+          <div class="mt-4 grid sm:grid-cols-1 gap-3">
+            <a href="#reader" class=" text-justify bg-blue-50 p-3 rounded-lg border border-slate-100 hover:bg-blue-200 transition">Variants of this pattern have been in use since computers were first used for auto
+            matic data processing. When transformations are sequential with data processed in
+             batches, this pipe and filter architectural model becomes a batch sequential model, a
+             common architecture for data processing systems (e.g., a billing system). The archi
+            tecture of an embedded system may also be organized as a process pipeline, with
+             each process executing concurrently. I discuss the use of this pattern in embedded
+             systems in Chapter 20.</a>
+          </div>
+        </details>
+          <details class="group p-4 rounded-xl border border-slate-100 bg-white shadow transition">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-100 flex items-center justify-center font-semibold">3</div>
+              <div>
+                <div class="font-medium">Figure 6.12 The pipe and filter pattern</div>
+              </div>
+            </div>
+            <div class="text-slate-400 group-open:rotate-180 transition-transform">▾</div>
+          </summary>
 
-    <p> <strong>Figure 6.12 </strong> The pipe and filter pattern</p>
-    <img src="src/img 6.12.jpeg" alt=" Figure 6.12 The pipe and filter pattern">
-
-
-    <p> <strong>Figure 6.13 </strong> An example of the pipe and filter architecture</p>
-    <img src="src/img 6.13.jpeg" alt=" Figure 6.13 An example of the pipe and filter architecture">
-
-    <p>
-      The client program is simply an integrated user interface, constructed
-      using a web browser, to access these services. The most important
-      advantage of the client–server model is that it is a distributed
-      architecture. Effective use can be made of networked systems with many
-      distributed processors. It is easy to add a new server and integrate it
-      with the rest of the system or to upgrade servers transparently without
-      affecting other parts of the system. I discuss distributed
-      architectures, including client–server architectures and distrib uted
-      object architectures, in Chapter 18.
-    </p>
-
-    <h2>6.3.4 Pipe and filter architecture</h2>
-    <p>
-      My final example of an architectural pattern is the pipe and filter
-      pattern. This is a model of the run-time organization of a system where
-      functional transformations process their inputs and produce outputs.
-      Data flows from one to another and is trans formed as it moves through
-      the sequence. Each processing step is implemented as a transform. Input
-      data flows through these transforms until converted to output. The
-      transformations may execute sequentially or in parallel. The data can be
-      processed by each transform item by item or in a single batch.<br />
-      The name ‘pipe and filter’ comes from the original Unix system where it
-      was pos sible to link processes using ‘pipes’. These passed a text
-      stream from one process to another. Systems that conform to this model
-      can be implemented by combining Unix commands, using pipes and the
-      control facilities of the Unix shell. The term ‘filter’ is used because
-      a transformation ‘filters out’ the data it can process from its input
-      data stream.<br />
-      Variants of this pattern have been in use since computers were first
-      used for auto matic data processing. When transformations are sequential
-      with data processed in batches, this pipe and filter architectural model
-      becomes a batch sequential model, a common architecture for data
-      processing systems (e.g., a billing system). The archi tecture of an
-      embedded system may also be organized as a process pipeline, with each
-      process executing concurrently. I discuss the use of this pattern in
-      embedded systems in Chapter 20.<br />
-      An example of this type of system architecture, used in a batch
-      processing appli cation, is shown in Figure 6.13. An organization has
-      issued invoices to customers. Once a week, payments that have been made
-      are reconciled with the invoices.
-    </p>
-
-
-
-    <p> <strong>Architectural patterns for control</strong> </p>
-    There are specific architectural patterns that reflect commonly used ways of organizing control in a system.
-    These include centralized control, based on one component calling other components, and event-based control,
-    where the system reacts to external events.
-    <strong><a href="">http://www.SoftwareEngineering-9.com/Web/Architecture/ArchPatterns/</a></strong></p>
-
-    <p> For those invoices that have been paid, a receipt is issued. For those invoices that have
+          <div  id="fig6-12"class=" py-5 mt-4 grid sm:grid-cols-1 gap-3">
+            <a href="#reader" class="bg-blue-50 p-3 rounded-lg border border-slate-200 hover:bg-blue-50 transition">      <p class=" text-center"> <strong >Figure 6.12 </strong>The pipe and filter pattern</p>
+    <img src="src/assets/img/img 6.12.jpeg" class=" img bg-center mx-auto"
+      alt=" Figure 6.12 The pipe and filter pattern">  </a> 
+          </div>
+        </details>        
+          <details class="group p-4 rounded-xl border border-slate-100 bg-white shadow transition">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-100 flex items-center justify-center font-semibold">4</div>
+              <div>
+                <div class="font-medium">Figure 6.13 An example of the pipe and filter architecture</div>        
+              </div>
+            </div>
+            <div class="text-slate-400 group-open:rotate-180 transition-transform">▾</div>
+          </summary>
+          <div class=" py-5 mt-4 grid sm:grid-cols-1 gap-3">
+            <a href="#reader" class="bg-blue-50 p-3 rounded-lg border border-slate-200 hover:bg-blue-50 transition">      <p class=" text-center"> <strong id="fig6-13">Figure 6.13 </strong> Pipe and filter architecture</p>
+    <img src="src/assets/img/img 6.13.jpeg" class=" img bg-center mx-auto"
+      alt=" Figure 6.13 An example of the pipe and filter architecture">  </a>    
+          </div>
+        </details>
+      </div>
+    </section>
+    <p class="text-justify">An organization has issued invoices to customers.
+       Once a week, payments that have been made are reconciled with the invoices. For those invoices that have been paid, a receipt is issued.
+       For those invoices that have been paid, a receipt is issued. For those invoices that have
       not been paid within the allowed payment time, a reminder is issued.<br></br>
       Interactive systems are difficult to write using the pipe and filter model because
       of the need for a stream of data to be processed. Although simple textual input
       and output can be modeled in this way, graphical user interfaces have more complex
       I/O formats and a control strategy that is based on events such as mouse clicks or
       menu selections. It is difficult to translate this into a form compatible with the
-      pipelining model.</p>
+      pipelining model.</p>  
   </main>
-  <footer>
-    <section>
-      <div class="footer-names">Andaya, Ronmel D.</div>
-      <div class="footer-names">Casanova, Johnharry</div>
-      <div class="footer-names">Carbonilla, Marjorie</div>
-      <div class="footer-names">De Los Santos, Maricar</div>
-    </section>
-  </footer>
+  <footer class="footer-container">
+      <div class="footer-div1">
+        <div class="footer-container1">
+          <img
+            class="h-25 w-25 max-[1160px]:h-20 max-[1160px]:w-20 max-[1030px]:h-15 max-[1030px]:w-15 max-[810px]:h-10 max-[810px]:w-10 max-[540px]:h-8 max-[540px]:w-8 max-[425px]:h-5 max-[425px]:w-5"
+            src="/src/assets/img/logo.png"
+            alt=" "
+          />
+          <h1>Architectural Design</h1>
+        </div>
+        <div>
+          <h3>NAME</h3>
+          <p>Andaya, Ronmel D.</p>
+          <p>Carbonilla, Marjorie B.</p>
+          <p>Casanova, Johnharry S.</p>
+          <p>De Los Santos, Maricar R.</p>
+        </div>
+        <div>
+          <h3>CONTACTS</h3>
+          <p>andayaronmel@gmail.com</p>
+          <p>carbonillamarjorie@gmail.com</p>
+          <p>casanovajohnharry@gmail.com</p>
+          <p>delossantosmaricar@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-div2">
+        <h1>@HARRYSORT - BS INFORMATION TECHNOLOGY</h1>
+        <div class="flex items-center gap-4">
+          <div>
+            <img class="footer-img" src="/src/assets/img/ig-icon.png" alt="" />
+          </div>
+          <div>
+            <img
+              class="footer-img"
+              src="/src/assets/img/icon-facebook.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="footer-img"
+              src="/src/assets/img/icon-twitter.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
-
 </html>
