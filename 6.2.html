@@ -1,127 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Architectural views</title>
-    <link href="./src/output.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header>
-      <center>
-        <h1><a href="homepage.html">CHAPTER 6</a></h1>
-        <h2>Architectural Design</h2>
-        <button><a href="chapter_6-1.html">Chapter 6.1</a></button>
-        <button><a href="6.2.html">Chapter 6.2</a></button>
-        <button><a href="Chapter6_3.html">Chapter 6.3</a></button>
-        <button><a href="Chapter6.4.html">Chapter 6.4</a></button>
-      </center>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architectural views</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="homepage-header">
+      <div class="header-h1">
+        <a href="homepage.html">
+          <img
+            class="h-11 max-[585px]:h-9"
+            src="/src/assets/img/logo.png"
+            alt="haha"
+          />
+        </a>
+        <a href="homepage.html">
+          <h1 class="pt-1.5 max-[730px]:hidden">Chapter 6</h1>
+        </a>
+      </div>
 
-    <h1>6.2 Architectural views</h1>
-    In this section, I discuss two issues that are relevant to both of these:
+      <nav class="max-[1140px]:hidden">
+        <button class="header-button">
+          <a href="chapter_6-1.html">Architectural Design Decisions</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">Architectural Views</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">Architectural Patterns</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">Application Architectures</a>
+        </button>
+      </nav>
 
-    <p>
-      1. What views or perspectives are useful when designing and documenting a
-      systems architecture?
-    </p>
-    <p>2. What notations should be used for describing architectural models?</p>
+      <nav class="min-[1140px]:hidden max-[585px]:hidden">
+        <button class="header-button">
+          <a href="chapter_6-1.html">Decisions</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">Views</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">Patterns</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">Application</a>
+        </button>
+      </nav>
 
-    <href
-      >It is impossible to represent all relevant information about a systems
-      architecture in a single architectural model, as each model only shows one
-      view or perspective of the system. It might show how a system is
-      decomposed into modules, how the run-time processes interact, or the
-      different ways in which system components are distributed across a
-      network</href
-    >
+      <nav class="min-[585px]:hidden text-md font-quano">
+        <button class="header-button">
+          <a href="chapter_6-1.html">6.1</a>
+        </button>
+        <button class="header-button">
+          <a href="6.2.html">6.2</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6_3.html">6.3</a>
+        </button>
+        <button class="header-button">
+          <a href="Chapter6.4.html">6.4</a>
+        </button>
+      </nav>
+    </header>
 
-    <href
-      >There are different opinions as to what views are required. Krutchen
-      (1995), in his well-known 4+1 view model of software architecture,
-      suggests that there should be four fundamental architectural views, which
-      are related using use cases or scenarios</href
-    >
+    <main class="chapter_6-2_main">
+      <!-- Section 1 -->
+      <section
+        class="chapter_6-2_div1 bg-[var(--light-color)] rounded-2xl shadow-md p-6"
+      >
+        <h1 class="text-3xl font-bold text-[var(--dark-color)] mb-4">
+          Architectural Views
+        </h1>
 
-    <h2>The views that he suggests are:</h2>
-    <p>
-      1. A logical view, which shows the key abstractions in the system as
-      objects or object classes
-    </p>
-    <p>
-      2. A process view, which shows how, at run-time, the system is composed of
-      interacting processes
-    </p>
-    <p>
-      3. A development view, which shows how the software is decomposed for
-      development, that is, it shows the breakdown of the software into
-      components that are implemented by a single developer or development team
-    </p>
-    <p>
-      4. A physical view, which shows the system hardware and how software
-      components are distributed across the processors in the system.
-    </p>
-    <main>
-      <h2>
-        Hofmeister et al. (2000) suggest the use of similar views but add to
-        this the notion of a conceptual view. This view is an abstract view of
-        the system that can be the basis for decomposing high-level requirements
-        into more detailed specifications, help engineers make decisions about
-        components that can be reused, and represent a product line (discussed
-        in Chapter 16) rather than a single system
-      </h2>
-      <h2>
-        In practice, conceptual views are almost always developed during the
-        design process and are used to support architectural decision making.
-        They are a way of communicating the essence of a system to different
-        stakeholders. During the design process, some of the other views may
-        also be developed when different aspects of the system are discussed,
-        but there is no need for a complete description from all perspectives
-      </h2>
-      <h2>
-        A survey in 2006 (Lange et al., 2006) showed that, when the UML was
-        used, it was mostly applied in a loose and informal way. The authors of
-        that paper argued that this was a bad thing. I disagree with this view
-      </h2>
-      <h2>
-        The UML is of most value when you are documenting an architecture in
-        detail or using model-driven development, as discussed in Chapter 5
-      </h2>
-      <h2>
-        A number of researchers have proposed the use of more specialized
-        architectural description languages (ADLs) (Bass et al., 2003) to
-        describe system architectures.
-      </h2>
+        <p class="indent-7 text-justify leading-relaxed">
+          It is impossible to represent all relevant information about a
+          system’s architecture in a single architectural model, as each model
+          only shows one view or perspective of the system. It might show how a
+          system is decomposed into modules, how the run-time processes
+          interact, or the different ways in which system components are
+          distributed across a network.
+        </p>
 
-      <p>
-        This makes it difficult to assess their usefulness for practical
-        software engineering. ADLs designed for a particular domain (e.g.,
-        automobile systems) may be used as a
-      </p>
+        <p class="mt-4">
+          In this section, I discuss two issues that are relevant to both of
+          these:
+        </p>
 
-      <h1>Figure 6.2 The modelview-controller (MVC)pattern</h1>
-      <img src="Annotation 2025-09-03 114743.png" alt="" />
+        <article class="mt-3 space-y-2 list-decimal ml-6">
+          <div>
+            What views or perspectives are useful when designing and documenting
+            a system’s architecture?
+          </div>
+          <div>
+            What notations should be used for describing architectural models?
+          </div>
+        </article>
+      </section>
 
-      <p>
-        basis for model-driven development. However, I believe that informal
-        models and notations, such as the UML, will remain the most commonly
-        used ways of documenting system architectures
-      </p>
-      <p>
-        Users of agile methods claim that detailed design documentation is
-        mostly unused. It is, therefore, a waste of time and money to develop
-        it. I largely agree with this view and I think that, for most systems,
-        it is not worth developing a detailed architectural description from
-        these four perspectives. You should develop the views that are useful
-        for communication and not worry about whether or not your architectural
-        documentation is complete. However, an exception to this is when you are
-        developing critical systems, when you need to make a detailed
-        dependability analysis of the system. You may need to convince external
-        regulators that your system conforms to their regulations and so
-        complete architectural documentation may be required.
-      </p>
-      <section id="content"></section>
-    </main>
-    <script src="app.js"></script>
-  </body>
+      <!-- Section 2 -->
+      <section
+        class="chapter_6-2_div2 bg-[var(--light-color)] rounded-2xl shadow-md p-6"
+      >
+        <h2 class="text-2xl font-semibold [var(--dark-color)] mb-4">
+          The Views That He Suggests Are
+        </h2>
+
+        <p class="indent-7 text-justify leading-relaxed">
+          There are different opinions as to what views are required. Krutchen
+          (1995), in his well-known 4+1 view model of software architecture,
+          suggests that there should be four fundamental architectural views,
+          which are related using use cases or scenarios.
+        </p>
+
+        <article class="mt-4 space-y-3 list-decimal ml-6">
+          <div>
+            <span class="font-semibold">Logical view:</span> shows the key
+            abstractions in the system as objects or object classes.
+          </div>
+          <div>
+            <span class="font-semibold">Process view:</span> shows how, at
+            run-time, the system is composed of interacting processes.
+          </div>
+          <div>
+            <span class="font-semibold">Development view:</span> shows how the
+            software is decomposed for development — i.e., the breakdown of
+            components implemented by teams or individuals.
+          </div>
+          <div>
+            <span class="font-semibold">Physical view:</span> shows the system
+            hardware and how software components are distributed across
+            processors.
+          </div>
+        </article>
+      </section>
+
+      <!-- Section 3 (Flip Cards) -->
+      <div class="chapter_6-2_div3">
+        <label class="inline-block cursor-pointer [perspective:1000px]">
+          <input type="checkbox" class="sr-only peer" />
+
+          <div
+            class="relative inline-block transition-transform duration-700 ease-in-out [transform-style:preserve-3d] peer-checked:[transform:rotateX(180deg)]"
+          >
+            <div class="front_side">
+              <p class="p-4 text-justify">
+                Hofmeister et al. (2000) suggest the use of similar views but
+                add to this the notion of a conceptual view. This view is an
+                abstract view of the system that can be the basis for
+                decomposing high-level requirements into more detailed
+                specifications, help engineers make decisions about components
+                that can be reused, and represent a product line rather than a
+                single system.
+              </p>
+            </div>
+
+            <div class="back_side">
+              <p class="p-4 text-justify">
+                In practice, conceptual views are almost always developed during
+                the design process and are used to support architectural
+                decision making. They are a way of communicating the essence of
+                a system to different stakeholders.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="inline-block cursor-pointer [perspective:1000px]">
+          <input type="checkbox" class="sr-only peer" />
+
+          <div
+            class="relative inline-block transition-transform duration-700 ease-in-out [transform-style:preserve-3d] peer-checked:[transform:rotateX(180deg)]"
+          >
+            <div class="front_side">
+              <p class="p-4 text-justify">
+                A survey in 2006 (Lange et al., 2006) showed that, when the UML
+                was used, it was mostly applied in a loose and informal way. The
+                authors of that paper argued that this was a bad thing. I
+                disagree with this view The UML is of most value when you are
+                documenting an architecture in detail or using model-driven
+                development, as discussed in Chapter 5 A number of researchers
+                have proposed the use of more specialized architectural
+                description languages (ADLs) (Bass et al., 2003) to describe
+                system architectures.
+              </p>
+            </div>
+
+            <div class="back_side">
+              <p class="p-4 text-justify">
+                This makes it difficult to assess their usefulness for practical
+                software engineering. ADLs designed for a particular domain
+                (e.g., automobile systems) may be used as a basis for
+                model-driven development. However, I believe that informal
+                models and notations, such as the UML, will remain the most
+                commonly used ways of documenting system architectures
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="inline-block cursor-pointer [perspective:1000px]">
+          <input type="checkbox" class="sr-only peer" />
+
+          <div
+            class="relative inline-block transition-transform duration-700 ease-in-out [transform-style:preserve-3d] peer-checked:[transform:rotateX(180deg)]"
+          >
+            <div class="front_side">
+              <p class="p-4 text-justify">
+                Users of agile methods claim that detailed design documentation
+                is mostly unused. It is, therefore, a waste of time and money to
+                develop it. I largely agree with this view and I think that, for
+                most systems, it is not worth developing a detailed
+                architectural description from these four perspectives. You
+                should develop the views that are useful for communication and
+                not worry about whether or not your architectural documentation
+                is complete. However, an exception to this is when you are
+                developing critical systems, when you need to make a detailed
+                dependability analysis of the system. You may need to convince
+                external regulators that your system conforms to their
+                regulations and so complete architectural documentation may be
+                required.
+              </p>
+            </div>
+
+            <div class="back_side">
+              <label for="div1" class="cursor-pointer"
+                >Figure 6.2 The modelview-controller (MVC)pattern</label
+              >
+            </div>
+          </div>
+        </label>
+
+        <div class="flex justify-center">
+          <input
+            type="checkbox"
+            name="colorChanger"
+            id="div1"
+            class="peer hidden"
+          />
+          <div class="hidden peer-checked:block">
+            <img
+              class="relative h-100"
+              src="src/assets/img/Annotation 2025-09-03 114743.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-container">
+      <div class="footer-div1">
+        <div class="footer-container1">
+          <img
+            class="h-25 w-25 max-[1160px]:h-20 max-[1160px]:w-20 max-[1030px]:h-15 max-[1030px]:w-15 max-[810px]:h-10 max-[810px]:w-10 max-[540px]:h-8 max-[540px]:w-8 max-[425px]:h-5 max-[425px]:w-5"
+            src="/src/assets/img/logo.png"
+            alt=" "
+          />
+          <h1>Architectural Design</h1>
+        </div>
+        <div>
+          <h3>NAME</h3>
+          <p>Andaya, Ronmel D.</p>
+          <p>Carbonilla, Marjorie B.</p>
+          <p>Casanova, Johnharry S.</p>
+          <p>De Los Santos, Maricar R.</p>
+        </div>
+        <div>
+          <h3>CONTACTS</h3>
+          <p>andayaronmel@gmail.com</p>
+          <p>carbonillamarjorie@gmail.com</p>
+          <p>casanovajohnharry@gmail.com</p>
+          <p>delossantosmaricar@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-div2">
+        <h1>@HARRYSORT - BS INFORMATION TECHNOLOGY</h1>
+        <div class="flex items-center gap-4">
+          <div>
+            <img class="footer-img" src="/src/assets/img/ig-icon.png" alt="" />
+          </div>
+          <div>
+            <img
+              class="footer-img"
+              src="/src/assets/img/icon-facebook.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="footer-img"
+              src="/src/assets/img/icon-twitter.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
